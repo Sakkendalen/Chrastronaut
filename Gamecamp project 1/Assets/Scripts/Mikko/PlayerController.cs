@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour {
                     graplingHook.connectedAnchor = hit.point;
                     graplingHook.distance = Vector2.Distance(transform.position, hit.point);
                     Debug.Log("Tag of hit object : " + hit.collider.gameObject.tag);
-                    GetComponent<LineRenderer>().SetPosition(1, hit.point);
+                    GetComponent<LineRenderer>().SetPosition(0, hit.point);
                 }
             }
             else
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        GetComponent<LineRenderer>().SetPosition(0, transform.position);
+        GetComponent<LineRenderer>().SetPosition(1, transform.position);
 
         if (graplingHook.enabled == true)
         {
@@ -86,7 +86,9 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<LineRenderer>().enabled = false;
         }
+
         Debug.Log("Rigidbody : " + rigidbody.velocity.x);
+        //GetComponent<LineRenderer>().material.mainTextureScale = new Vector2 (graplingHook.distance ,1f);
 
 
     }
