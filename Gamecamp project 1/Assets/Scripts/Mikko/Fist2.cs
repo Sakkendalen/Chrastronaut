@@ -16,15 +16,22 @@ public class Fist2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (state == 1) {
+        if (state == 1)     //REST objekti menee pelaajan locationiin, piilotettaan myös graffat
+        {
             transform.position = playerGameobject.transform.position;
+            transform.GetChild(0).GetComponentInChildren<MeshRenderer>().enabled = false;
         }
+        else {
+            transform.GetChild(0).GetComponentInChildren<MeshRenderer>().enabled = true;
+        }
+
         if (state == 2) {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, 0.5f);
         }
         if (state == 3) {
             transform.position = Vector2.MoveTowards(transform.position, playerGameobject.transform.position, 0.5f);
         }
+
 
 
 

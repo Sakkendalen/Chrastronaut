@@ -6,6 +6,7 @@ public class PlayerController2 : MonoBehaviour {
 
     Rigidbody2D rigidBody;
     DistanceJoint2D graplingHook;
+    Animator animator;
     public GameObject fist;
     float movementx;
     float movementy;
@@ -15,6 +16,7 @@ public class PlayerController2 : MonoBehaviour {
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         graplingHook = GetComponent<DistanceJoint2D>();
+        animator = GetComponentInChildren<Animator>();
         graplingHook.enabled = false;
         GetComponent<LineRenderer>().material.mainTextureScale = new Vector2(2f, 1f);
     }
@@ -77,6 +79,29 @@ public class PlayerController2 : MonoBehaviour {
 
             GetComponent<LineRenderer>().SetPosition(1, transform.position);
         GetComponent<LineRenderer>().SetPosition(0, fist.transform.position);
+
+
+        //ANIMAATIOJUTTUJA
+        if (rigidBody.velocity.x > 0.01f || rigidBody.velocity.x < -0.01f) {
+            animator.SetBool("walk", true);
+        }
+        else
+        {
+            animator.SetBool("walk", false);
+        }
+
+      
+        if (rigidBody.velocity.x < 0)
+        {
+            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 270, 0);
+        }
+        if (rigidBody.velocity.x > 0)
+        {
+            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
+        }
+        animator.speed =  1 + rigidBody.velocity.magnitude/5;
+
+
     }
 
     public void hookHasJustBegun() {
