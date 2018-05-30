@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     float movementx;
     float movementy;
     bool readyToJump;
+    public GameObject fisti;
 
     // Use this for initialization
     void Start()
@@ -67,24 +68,41 @@ public class PlayerController : MonoBehaviour {
                     graplingHook.connectedAnchor = hit.point;
                     graplingHook.distance = Vector2.Distance(transform.position, hit.point);
                     Debug.Log("Tag of hit object : " + hit.collider.gameObject.tag);
-                    GetComponent<LineRenderer>().SetPosition(0, hit.point);
+                    //GetComponent<LineRenderer>().SetPosition(0, hit.point);
+                    fisti.GetComponent<FistMover>().SetFistTarget(hit.point.x, hit.point.y);
+                    //fisti.GetComponent<FistMover>().SetFistPosition(transform.position.x, transform.position.y);
+
+                }
+                else {
+                    Ray2D ray = new Ray2D(transform.position, new Vector2(rigidbody.velocity.x, 10f));
+                    ray.GetPoint(7f);
+                    fisti.GetComponent<FistMover>().SetFistTarget(ray.GetPoint(7f).x, ray.GetPoint(7f).y);
                 }
             }
             else
             {
                 graplingHook.enabled = false;
+            
             }
         }
 
+
+
         GetComponent<LineRenderer>().SetPosition(1, transform.position);
+        GetComponent<LineRenderer>().SetPosition(0, fisti.transform.position);
 
         if (graplingHook.enabled == true)
         {
             GetComponent<LineRenderer>().enabled = true;
         }
+
         if (graplingHook.enabled == false)
         {
             GetComponent<LineRenderer>().enabled = false;
+            fisti.GetComponent<FistMover>().SetFistPosition(transform.position.x, transform.position.y);
+            //if (Vector2.Distance(transform.position, fisti.transform.position) > 6.5f) {
+            //    fisti.GetComponent<FistMover>().SetFistTarget(transform.position.x, transform.position.y);
+            //}
         }
 
         Debug.Log("Rigidbody : " + rigidbody.velocity.x);
