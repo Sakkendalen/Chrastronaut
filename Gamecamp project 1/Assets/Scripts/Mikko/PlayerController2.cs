@@ -29,6 +29,7 @@ public class PlayerController2 : MonoBehaviour {
         if (graplingHook.enabled == true)
         {
             rigidBody.AddForce(new Vector2(movementx * 2, 0));
+            GetComponent<LineRenderer>().material.mainTextureScale = new Vector2(2f, 1f);
             graplingHook.distance -= movementy * 0.03f;
             if (graplingHook.distance < 1f)
             {
