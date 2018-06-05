@@ -77,13 +77,11 @@ public class Fist2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Platform") {
+        if (collision.gameObject.tag != "Player") {
             Debug.Log("TRIGGER2D!!!");
             state = 4;
             playerGameobject.GetComponent<PlayerController2>().hookHasJustBegun();
             transform.parent = collision.gameObject.transform; //parentoidaan collisioniin jos collisionilla on movementtia
-
-            //playerGameobject.GetComponent<DistanceJoint2D>().connectedBody = collision.gameObject.GetComponent<Rigidbody2D>();    //rigidbodyyn liittämistä
         }
     }
 

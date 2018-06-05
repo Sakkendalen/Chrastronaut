@@ -7,14 +7,11 @@ public class PlayerController2 : MonoBehaviour {
     Rigidbody2D rigidBody;
     DistanceJoint2D graplingHook;
     Animator animator;
-    public Camera gameCamera;
     public GameObject fist;
     float movementx;
     float movementy;
     RaycastHit2D hit;
     public float hookMaxDistance;
-    Vector3 mousePosition;
-    bool isTouchingGround;
 
 	// Use this for initialization
 	void Start () {
@@ -23,12 +20,10 @@ public class PlayerController2 : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
         graplingHook.enabled = false;
         GetComponent<LineRenderer>().material.mainTextureScale = new Vector2(4f, 1f); //linerenderer tekstuurisuhde kun tilet
-        isTouchingGround = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        checkGround();
         movementForces();
         hookControls();
         drawLines();
@@ -52,22 +47,9 @@ public class PlayerController2 : MonoBehaviour {
                 rigidBody.AddForce(new Vector2(movementx * 10, 0));
             }
         }
-
-        if (Input.GetButtonDown("Jump") && isTouchingGround) {          //HYPPY
-            rigidBody.AddForce(new Vector2(0, 200));
-            isTouchingGround = false;
-        }
-
     }
 
     void hookControls() {
-        mousePosition = Input.mousePosition;
-        mousePosition.z = Mathf.Abs(gameCamera.transform.position.z); //Laitetaan mousen koordinaatteja maailmaan
-        //mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        mousePosition = gameCamera.ScreenToWorldPoint(mousePosition);
-        Debug.Log(" X : " + mousePosition.x + " Y : " + mousePosition.y);
-
-
         if (graplingHook.enabled == true) {
             rigidBody.AddForce(new Vector2(movementx * 2, 0));
             graplingHook.distance -= movementy * 0.03f;
@@ -104,9 +86,7 @@ public class PlayerController2 : MonoBehaviour {
         if (Input.GetButtonDown("Fire1") && fist.GetComponent<Fist2>().GetState() == 1) {
             GetComponent<CircleCollider2D>().enabled = false;                                       //RAYCASTI KOHTEESEEN
             //hit = Physics2D.Raycast(transform.position, new Vector2(rigidBody.velocity.x, 5f), 7f);//Vaihtoehtoinen velocityohjaus
-            //hit = Physics2D.Raycast(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2), 7f);//vaihtoehtoinen hiiriohjaus
-            hit = Physics2D.Raycast(transform.position, mousePosition - transform.position, 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
-
+            hit = Physics2D.Raycast(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2), 7f);//vaihtoehtoinen hiiriohjaus
             GetComponent<CircleCollider2D>().enabled = true;                                        //RAYCASTI KOHTEESEEN
             //Debug.Log("mouse X : " + Input.mousePosition);
 
@@ -116,8 +96,7 @@ public class PlayerController2 : MonoBehaviour {
             }
             else {
                 //Ray2D ray = new Ray2D(transform.position, new Vector2(rigidBody.velocity.x, 5f)); //vaihtopehtoinen velocityohjaus
-                //Ray2D ray = new Ray2D(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2));    //hiiriohjaus
-                Ray2D ray = new Ray2D(transform.position, mousePosition - transform.position);
+                Ray2D ray = new Ray2D(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2));    //hiiriohjaus
                 ray.GetPoint(7f);
                 fist.GetComponent<Fist2>().SetFistState(2);
                 fist.GetComponent<Fist2>().SetFistTarget(new Vector2(ray.GetPoint(7f).x, ray.GetPoint(7f).y));
@@ -151,18 +130,5 @@ public class PlayerController2 : MonoBehaviour {
             transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
         }
         animator.speed = 1 + rigidBody.velocity.magnitude / 5;
-    }
-
-    void checkGround() {
-        //Vector2 rayOrigin = GetComponent<CircleCollider2D>().bounds.center;
-
-        float rayDistance = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
-
-        if (Physics2D.Raycast(transform.position + new Vector3 (0, -rayDistance, 0) , Vector2.down, 0.1f ) ) {
-            isTouchingGround = true;
-        }
-        else {
-            isTouchingGround = false;
-        }
     }
 }
