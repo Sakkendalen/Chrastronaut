@@ -8,6 +8,9 @@ public class PlayerMovement3D : MonoBehaviour {
 	private Rigidbody rb;
 	public float jumpforce;
 
+	public delegate void MyDelegate();
+	public event MyDelegate onDeath;
+
 	void Start () {
 		
 		rb = GetComponent<Rigidbody>();
@@ -27,18 +30,18 @@ public class PlayerMovement3D : MonoBehaviour {
 	}
 	void playerJump() {
 
-    Debug.Log ("Should Jump");
+		Debug.Log ("Should Jump");
 
-    Vector3 rayOrigin = GetComponent<Collider>().bounds.center;
+		Vector3 rayOrigin = GetComponent<Collider>().bounds.center;
 
-    float rayDistance = GetComponent<Collider>().bounds.extents.y + 0.1f;
-    Ray ray = new Ray ();
-    ray.origin = rayOrigin;
-    ray.direction = Vector3.down;
-    if(Physics.Raycast(ray, rayDistance, 1 << 8)) {
-        Debug.Log ("Jumping");
-        rb.AddForce (Vector3.up * jumpforce, ForceMode.Impulse);
-    }
+		float rayDistance = GetComponent<Collider>().bounds.extents.y + 0.1f;
+		Ray ray = new Ray ();
+		ray.origin = rayOrigin;
+		ray.direction = Vector3.down;
+		
+		if(Physics.Raycast(ray, rayDistance, 1 << 8)) {
+			Debug.Log ("Jumping");
+			rb.AddForce (Vector3.up * jumpforce, ForceMode.Impulse);
+		}
+	}
 }
-}
-
