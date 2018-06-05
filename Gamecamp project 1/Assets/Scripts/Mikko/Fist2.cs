@@ -7,10 +7,11 @@ public class Fist2 : MonoBehaviour {
     int state;  //1 rest //2 action //3 return //4 hold
     public Vector2 targetPosition;
     public GameObject playerGameobject;
-    
+    RaycastHit2D seePlayerCheck;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         state = 1;
 	}
 	
@@ -28,26 +29,30 @@ public class Fist2 : MonoBehaviour {
         if (state == 2) {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, 0.5f);
         }
-        if (state == 3) {
+        if (state == 3) {  //Return
             transform.position = Vector2.MoveTowards(transform.position, playerGameobject.transform.position, 0.5f);
+            GetComponent<CircleCollider2D>().enabled = false;
         }
+        if (state == 4) {
+
+        } 
 
 
 
 
         if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
         {
-            Debug.Log("RETURN");
+            //Debug.Log("RETURN");
             state = 3;
         }
         if (transform.position.x == playerGameobject.transform.position.x && transform.position.y == playerGameobject.transform.position.y )
         {
-            Debug.Log("REST");
+            //Debug.Log("REST");
             state = 1;
         }
 
 
-        if (Vector2.Distance(transform.position, playerGameobject.transform.position) > 0.8f) {
+        if (Vector2.Distance(transform.position, playerGameobject.transform.position) > 0.8f && state != 3) {
             GetComponent<CircleCollider2D>().enabled = true;
         }
         else {
@@ -64,6 +69,10 @@ public class Fist2 : MonoBehaviour {
     public void SetFistState(int num)
     {
         state = num;
+        if (state == 3)
+        {
+            transform.parent = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +81,7 @@ public class Fist2 : MonoBehaviour {
             Debug.Log("TRIGGER2D!!!");
             state = 4;
             playerGameobject.GetComponent<PlayerController2>().hookHasJustBegun();
+            transform.parent = collision.gameObject.transform; //parentoidaan collisioniin jos collisionilla on movementtia
         }
     }
 
