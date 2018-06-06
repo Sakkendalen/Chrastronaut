@@ -17,6 +17,8 @@ public class PlayerController2 : MonoBehaviour {
     bool isTouchingGround;
     bool walkleft;
     bool idle;
+    public Vector2 CheckpoinPosition;
+    Vector2 startposition;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,7 @@ public class PlayerController2 : MonoBehaviour {
         isTouchingGround = false;
         walkleft = false;
         idle = false;
+        startposition = transform.position;
     }
 	
 	// Update is called once per frame
@@ -168,7 +171,11 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
+<<<<<<< HEAD
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
+=======
+        //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
+>>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
     }
 
     void checkGround() {
@@ -183,6 +190,7 @@ public class PlayerController2 : MonoBehaviour {
             isTouchingGround = false;
         }
     }
+<<<<<<< HEAD
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
@@ -197,6 +205,14 @@ public class PlayerController2 : MonoBehaviour {
                 rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f ));
             }
             
+=======
+    public void Die() {
+        if(CheckpoinPosition != null){
+            transform.position = CheckpoinPosition;
+        }
+        else{
+            transform.position = startposition;
+>>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
         }
     }
 }
