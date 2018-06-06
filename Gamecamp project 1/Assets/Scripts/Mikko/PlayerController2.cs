@@ -40,6 +40,9 @@ public class PlayerController2 : MonoBehaviour {
         hookControls();
         drawLines();
         animations();
+        if (transform.position.y < -10) {
+            Die();
+        }
     }
 
 
@@ -171,11 +174,8 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-<<<<<<< HEAD
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
-=======
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
->>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
     }
 
     void checkGround() {
@@ -190,29 +190,33 @@ public class PlayerController2 : MonoBehaviour {
             isTouchingGround = false;
         }
     }
-<<<<<<< HEAD
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
 
-            if (transform.position.y > collision.gameObject.transform.position.y  +0.5f) {
+            if (transform.position.y > collision.gameObject.transform.position.y + 0.5f) {
                 rigidBody.AddForce(Vector2.up * 500);
                 Debug.Log("tapoin vihollisen");
                 Destroy(collision.gameObject);
             }
             else {
                 Debug.Log("vihollinen gyökkää");
-                rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f ));
+                rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
+                Die();
             }
+        }
+    }
             
-=======
     public void Die() {
-        if(CheckpoinPosition != null){
+
+        if (CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
         }
         else{
             transform.position = startposition;
->>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
         }
+
+        rigidBody.velocity = Vector3.zero;
+        //rigidBody.angularVelocity = Vector3.zero;
     }
 }
