@@ -72,7 +72,7 @@ public class PlayerController2 : MonoBehaviour {
         mousePosition.z = Mathf.Abs(gameCamera.transform.position.z); //Laitetaan mousen koordinaatteja maailmaan
         //mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition = gameCamera.ScreenToWorldPoint(mousePosition);
-        Debug.Log(" X : " + mousePosition.x + " Y : " + mousePosition.y);
+        //Debug.Log(" X : " + mousePosition.x + " Y : " + mousePosition.y);
 
 
         if (graplingHook.enabled == true) {
@@ -168,7 +168,7 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-        Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
+        //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
     }
 
     void checkGround() {
@@ -181,6 +181,22 @@ public class PlayerController2 : MonoBehaviour {
         }
         else {
             isTouchingGround = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Enemy") {
+
+            if (transform.position.y > collision.gameObject.transform.position.y  +0.5f) {
+                rigidBody.AddForce(Vector2.up * 500);
+                Debug.Log("tapoin vihollisen");
+                Destroy(collision.gameObject);
+            }
+            else {
+                Debug.Log("vihollinen gyökkää");
+                rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f ));
+            }
+            
         }
     }
 }
