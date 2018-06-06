@@ -17,6 +17,7 @@ public class PlayerController2 : MonoBehaviour {
     bool isTouchingGround;
     bool walkleft;
     bool idle;
+    public Vector2 CheckpoinPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -72,7 +73,7 @@ public class PlayerController2 : MonoBehaviour {
         mousePosition.z = Mathf.Abs(gameCamera.transform.position.z); //Laitetaan mousen koordinaatteja maailmaan
         //mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition = gameCamera.ScreenToWorldPoint(mousePosition);
-        Debug.Log(" X : " + mousePosition.x + " Y : " + mousePosition.y);
+        //Debug.Log(" X : " + mousePosition.x + " Y : " + mousePosition.y);
 
 
         if (graplingHook.enabled == true) {
@@ -168,7 +169,7 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-        Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
+        //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
     }
 
     void checkGround() {
@@ -181,6 +182,11 @@ public class PlayerController2 : MonoBehaviour {
         }
         else {
             isTouchingGround = false;
+        }
+    }
+    public void Die() {
+        if(CheckpoinPosition != null){
+            transform.position = CheckpoinPosition;
         }
     }
 }

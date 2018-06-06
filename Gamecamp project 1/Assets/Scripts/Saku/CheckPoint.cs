@@ -21,17 +21,14 @@ public class CheckPoint : MonoBehaviour
             // "Checkpoint" that will only collide 
             // with characters.
             if (collider.gameObject.layer 
-                == LayerMask.NameToLayer("Character"))
+                == LayerMask.NameToLayer("Default"))
             {
-                Trigger();
+                Trigger(collider.gameObject);
             }
         }
     }
-    void Trigger()
+    void Trigger(GameObject Player)
     {
-        // Tell the animation controller about our 
-        // recent triggering
-        GetComponent<Animator>().SetTrigger("Triggered");
-        triggered = true;
+        Player.GetComponent<PlayerController2>().CheckpoinPosition = transform.position;
     }
 }
