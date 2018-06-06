@@ -15,6 +15,8 @@ public class PlayerController2 : MonoBehaviour {
     public float hookMaxDistance;
     Vector3 mousePosition;
     bool isTouchingGround;
+    bool walkleft;
+    bool idle;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,8 @@ public class PlayerController2 : MonoBehaviour {
         graplingHook.enabled = false;
         GetComponent<LineRenderer>().material.mainTextureScale = new Vector2(4f, 1f); //linerenderer tekstuurisuhde kun tilet
         isTouchingGround = false;
+        walkleft = false;
+        idle = false;
     }
 	
 	// Update is called once per frame
@@ -56,6 +60,9 @@ public class PlayerController2 : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && isTouchingGround) {          //HYPPY
             rigidBody.AddForce(new Vector2(0, 200));
             isTouchingGround = false;
+        }
+        if (Input.GetButtonDown("Jump") && fist.GetComponent<Fist2>().GetState() == 4) { //jos painetaan hyppyä ilmassa irrotetaan koukku
+            fist.GetComponent<Fist2>().SetFistState(3);
         }
 
     }
@@ -136,21 +143,32 @@ public class PlayerController2 : MonoBehaviour {
 
     void animations() {
         //ANIMAATIOJUTTUJA
-        if (rigidBody.velocity.x > 0.01f || rigidBody.velocity.x < -0.01f) {    //jos nopeus on suurempi kuin niin walk
-            animator.SetBool("walk", true);
+        //if (rigidBody.velocity.x > 0.01f || rigidBody.velocity.x < -0.01f) {    //jos nopeus on suurempi kuin niin walk
+        //    animator.SetBool("walk", true);
+        //}
+        //else {
+        //    animator.SetBool("walk", false);
+        //}
+
+
+        if (rigidBody.velocity.x < 0f) {         //rotate facing riippuen onko velocity - vai +
+            //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 270, 0);
+            walkleft = true;
+            idle = false;
+        }
+        else if (rigidBody.velocity.x > 0f) {
+            //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
+            walkleft = false;
+            idle = false;
         }
         else {
-            animator.SetBool("walk", false);
-        }
-
-
-        if (rigidBody.velocity.x < 0) {         //rotate facing riippuen onko velocity - vai +
-            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 270, 0);
-        }
-        if (rigidBody.velocity.x > 0) {
-            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
+            idle = true;
         }
         animator.speed = 1 + rigidBody.velocity.magnitude / 5;
+        animator.SetBool("left", walkleft);
+        animator.SetBool("idle", idle);
+        animator.SetBool("ground", isTouchingGround);
+        Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
     }
 
     void checkGround() {
