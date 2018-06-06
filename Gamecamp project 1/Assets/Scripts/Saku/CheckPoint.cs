@@ -24,6 +24,7 @@ public class CheckPoint : MonoBehaviour
                 == LayerMask.NameToLayer("Default"))
             {
                 Trigger(collider.gameObject);
+                triggered = true;
             }
         }
     }

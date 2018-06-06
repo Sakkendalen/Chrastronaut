@@ -18,6 +18,7 @@ public class PlayerController2 : MonoBehaviour {
     bool walkleft;
     bool idle;
     public Vector2 CheckpoinPosition;
+    Vector2 startposition;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class PlayerController2 : MonoBehaviour {
         isTouchingGround = false;
         walkleft = false;
         idle = false;
+        startposition = transform.position;
     }
 	
 	// Update is called once per frame
@@ -187,6 +189,9 @@ public class PlayerController2 : MonoBehaviour {
     public void Die() {
         if(CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
+        }
+        else{
+            transform.position = startposition;
         }
     }
 }
