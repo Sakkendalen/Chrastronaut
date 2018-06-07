@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MasterScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/SakunScene.unity
+  - enabled: 0
+    path: Assets/Scenes/Saku/SakunScene.unity
     guid: 66e74d3bfa76c214b8918694718520ca
+  - enabled: 1
+    path: Assets/Scenes/JarnonScene.unity
+    guid: 1fcd1fba2a593b54f9ef5a6b496bc5f6
   m_configObjects: {}

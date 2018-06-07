@@ -40,6 +40,9 @@ public class PlayerController2 : MonoBehaviour {
         hookControls();
         drawLines();
         animations();
+        if (transform.position.y < -10) {
+            Die();
+        }
     }
 
 
@@ -191,24 +194,29 @@ public class PlayerController2 : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
 
-            if (transform.position.y > collision.gameObject.transform.position.y  +0.5f) {
+            if (transform.position.y > collision.gameObject.transform.position.y + 0.5f) {
                 rigidBody.AddForce(Vector2.up * 500);
                 Debug.Log("tapoin vihollisen");
                 Destroy(collision.gameObject);
             }
             else {
                 Debug.Log("vihollinen gyökkää");
-                rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f ));
+                rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
+                Die();
             }
         }
     }
             
     public void Die() {
-        if(CheckpoinPosition != null){
+
+        if (CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
         }
         else{
             transform.position = startposition;
         }
+
+        rigidBody.velocity = Vector3.zero;
+        //rigidBody.angularVelocity = Vector3.zero;
     }
 }
