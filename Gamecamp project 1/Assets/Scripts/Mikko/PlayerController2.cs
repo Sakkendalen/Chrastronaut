@@ -171,11 +171,8 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-<<<<<<< HEAD
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
-=======
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
->>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
     }
 
     void checkGround() {
@@ -190,7 +187,6 @@ public class PlayerController2 : MonoBehaviour {
             isTouchingGround = false;
         }
     }
-<<<<<<< HEAD
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
@@ -204,15 +200,15 @@ public class PlayerController2 : MonoBehaviour {
                 Debug.Log("vihollinen gyökkää");
                 rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f ));
             }
+        }
+    }
             
-=======
     public void Die() {
         if(CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
         }
         else{
             transform.position = startposition;
->>>>>>> 8efe495973ae52779a31ed996be109f86b55ca58
         }
     }
 }
