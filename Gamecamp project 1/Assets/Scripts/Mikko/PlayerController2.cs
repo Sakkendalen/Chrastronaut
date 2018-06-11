@@ -40,7 +40,7 @@ public class PlayerController2 : MonoBehaviour {
         hookControls();
         drawLines();
         animations();
-        if (transform.position.y < -7) {  //rotkokuolema
+        if (transform.position.y < -10) {  //rotkokuolema
             Die();
         }
     }
