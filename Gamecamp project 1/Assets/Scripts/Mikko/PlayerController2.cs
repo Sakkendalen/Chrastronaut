@@ -202,8 +202,20 @@ public class PlayerController2 : MonoBehaviour {
             else {
                 Debug.Log("vihollinen gyökkää");
                 rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
-                Die();
+                //Die();
             }
+        }
+
+        if (collision.gameObject.tag == "EnemySpikes") {
+
+            if (transform.position.x < collision.gameObject.transform.position.x) {
+                rigidBody.AddForce(new Vector2 (-300f, 200f));
+            }
+            else {
+                rigidBody.AddForce(new Vector2(300, 200f));
+            }
+            //rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
+
         }
     }
             
