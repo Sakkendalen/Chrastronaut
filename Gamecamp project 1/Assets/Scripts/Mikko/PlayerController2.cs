@@ -40,7 +40,7 @@ public class PlayerController2 : MonoBehaviour {
         hookControls();
         drawLines();
         animations();
-        if (transform.position.y < -10) {
+        if (transform.position.y < -7) {  //rotkokuolema
             Die();
         }
     }
@@ -216,6 +216,7 @@ public class PlayerController2 : MonoBehaviour {
             transform.position = startposition;
         }
 
+        //gameCamera.GetComponent<CameraFollow2>().playerAliveMovement = false; //pelaaja on kuollut ja asetetaan kameran liikkumismoodi sellaiseksi
         rigidBody.velocity = Vector3.zero;
         //rigidBody.angularVelocity = Vector3.zero;
     }

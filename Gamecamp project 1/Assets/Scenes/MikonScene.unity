@@ -468,6 +468,7 @@ MonoBehaviour:
   target: {fileID: 706486098}
   smoothSpeed: 0.01
   offset: {x: 0, y: 2, z: -8}
+  playerAliveMovement: 0
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -883,6 +884,7 @@ GameObject:
   - component: {fileID: 448133734}
   - component: {fileID: 448133736}
   - component: {fileID: 448133735}
+  - component: {fileID: 448133737}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -945,6 +947,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 448133733}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &448133737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 448133733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf2936cbe6ec5e448aaeaa7166596b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &553804669
 Prefab:
   m_ObjectHideFlags: 0

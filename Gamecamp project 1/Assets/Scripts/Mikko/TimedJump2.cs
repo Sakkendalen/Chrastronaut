@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SputnikScript : MonoBehaviour {
+public class TimedJump2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
