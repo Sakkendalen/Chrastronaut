@@ -11,17 +11,17 @@ public class SputnikScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(new Vector3(0,0, -0.05f) );
+        transform.Translate(new Vector3(0,0, -0.05f), Space.World );
 
         if (transform.position.z < -20f) {
             transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z +70);
         }
 
         if (transform.position.z < 5f && transform.position.z > -5f) {
-            transform.GetComponentInParent<BoxCollider2D>().enabled = true;
+            transform.GetComponentInParent<CapsuleCollider2D>().enabled = true;
         }
         else {
-            transform.GetComponentInParent<BoxCollider2D>().enabled = false;
+            transform.GetComponentInParent<CapsuleCollider2D>().enabled = false;
         }
 	}
 }

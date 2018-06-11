@@ -23,6 +23,7 @@ public class CameraFollow2 : MonoBehaviour {
 
 
         Vector3 desiredPosition = target.transform.position + offset - velocityOffset/2;
+
         Vector3 smoothedPosition = Vector3.Slerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 

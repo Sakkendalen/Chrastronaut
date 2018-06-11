@@ -157,12 +157,12 @@ public class PlayerController2 : MonoBehaviour {
         //}
 
 
-        if (rigidBody.velocity.x < 0f) {         //rotate facing riippuen onko velocity - vai +
+        if (rigidBody.velocity.x < -0.01f) {         //rotate facing riippuen onko velocity - vai +
             //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 270, 0);
             walkleft = true;
             idle = false;
         }
-        else if (rigidBody.velocity.x > 0f) {
+        else if (rigidBody.velocity.x > 0.01f) {
             //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
             walkleft = false;
             idle = false;
@@ -174,7 +174,7 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-        //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
+        Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
     }
 
