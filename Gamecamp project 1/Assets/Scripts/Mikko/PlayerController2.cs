@@ -174,7 +174,7 @@ public class PlayerController2 : MonoBehaviour {
         animator.SetBool("left", walkleft);
         animator.SetBool("idle", idle);
         animator.SetBool("ground", isTouchingGround);
-        Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
+        // Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);  //ANIMAATIODEBUGGI
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
     }
 
@@ -202,6 +202,7 @@ public class PlayerController2 : MonoBehaviour {
             else {
                 Debug.Log("vihollinen gyökkää");
                 rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
+                gameObject.GetComponent<PlayerHealth>().LoseHealth();
                 //Die();
             }
         }
@@ -221,15 +222,19 @@ public class PlayerController2 : MonoBehaviour {
             
     public void Die() {
 
+        rigidBody.velocity = Vector2.zero;
+        Debug.Log("Resetting velocity");
+
         if (CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
+            gameObject.GetComponent<PlayerHealth>().DisplayHealth();
         }
         else{
             transform.position = startposition;
+            gameObject.GetComponent<PlayerHealth>().DisplayHealth();
         }
 
         //gameCamera.GetComponent<CameraFollow2>().playerAliveMovement = false; //pelaaja on kuollut ja asetetaan kameran liikkumismoodi sellaiseksi
-        rigidBody.velocity = Vector3.zero;
         //rigidBody.angularVelocity = Vector3.zero;
     }
 }

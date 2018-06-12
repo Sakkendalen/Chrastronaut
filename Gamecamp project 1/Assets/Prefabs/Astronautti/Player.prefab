@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 120402044840251968}
   - component: {fileID: 114256485594305600}
   - component: {fileID: 114085149499987586}
+  - component: {fileID: 114562007824289628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1492,6 +1493,22 @@ MonoBehaviour:
   gameCamera: {fileID: 0}
   fist: {fileID: 0}
   hookMaxDistance: 0
+  CheckpoinPosition: {x: 0, y: 0}
+--- !u!114 &114562007824289628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089404123443898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb0253b0aad59e45b39b806bc52faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heart1: {fileID: 0}
+  Heart2: {fileID: 0}
+  Heart3: {fileID: 0}
+  MaxHealth: 3
 --- !u!120 &120402044840251968
 LineRenderer:
   m_ObjectHideFlags: 1

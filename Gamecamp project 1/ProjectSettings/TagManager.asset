@@ -9,6 +9,7 @@ TagManager:
   - Gap
   - Enemy
   - EnemySpikes
+  - Health
   layers:
   - Default
   - TransparentFX
