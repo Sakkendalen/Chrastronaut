@@ -714,6 +714,12 @@ PolygonCollider2D:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 30c570938b383374ea6489808915634c, type: 3}
   m_PrefabInternal: {fileID: 2013431837}
+--- !u!114 &710446700 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114675756014557502, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &774665351 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4195446637507084, guid: e68f46b2571fb3149be3704dd2d68713,
@@ -1265,6 +1271,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573001340 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114284776363806820, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1595306547
 Prefab:
   m_ObjectHideFlags: 0
@@ -1584,6 +1596,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: jetPackEnergyBar
+      value: 
+      objectReference: {fileID: 1793431411}
     - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: gameCamera
@@ -1594,16 +1611,21 @@ Prefab:
       propertyPath: fist
       value: 
       objectReference: {fileID: 1088581109}
-    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
-      propertyPath: hookMaxDistance
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: jetPackEnergyBar
+      propertyPath: Heart1
       value: 
-      objectReference: {fileID: 1793431411}
+      objectReference: {fileID: 1573001340}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: Heart2
+      value: 
+      objectReference: {fileID: 710446700}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: Heart3
+      value: 
+      objectReference: {fileID: 2024011857}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
@@ -1760,6 +1782,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c570938b383374ea6489808915634c, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &2024011857 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114618261519360608, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &2067275420
 Prefab:
   m_ObjectHideFlags: 0
