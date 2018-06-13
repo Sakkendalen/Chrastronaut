@@ -43,6 +43,13 @@ public class PlayerController2 : MonoBehaviour {
         if (transform.position.y < -10) {  //rotkokuolema
             Die();
         }
+
+        GetComponent<CircleCollider2D>().enabled = false;
+        RaycastHit2D hitdown;
+        hitdown = Physics2D.Raycast(transform.position , Vector2.down, 1f);
+        Debug.Log(" Normal : " + hitdown.normal);
+        GetComponent<CircleCollider2D>().enabled = true;
+
     }
 
 
