@@ -53,10 +53,11 @@ public class PlayerController2 : MonoBehaviour {
         GetComponent<CircleCollider2D>().enabled = true;
         if (hitdown.normal.x < -0.1f) {
             Debug.Log("extraforce right");
-            rigidBody.AddForce(Vector2.right * 3f);
+            rigidBody.AddForce(Vector2.left * hitdown.normal.x * 7f);
         }
         if (hitdown.normal.x > 0.1f) {
-            rigidBody.AddForce(Vector2.right * -3f);
+            Debug.Log("extraforce left");
+            rigidBody.AddForce(Vector2.left * hitdown.normal.x * 7f);
         }
         //loppuu
 
