@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtScript : MonoBehaviour {
+public class SmokeDestroyer : MonoBehaviour {
 
-    public GameObject targetToLookAt;
+    ParticleSystem pasy;
 
 	// Use this for initialization
 	void Start () {
-		
+        pasy = GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.LookAt(targetToLookAt.transform.position);
+		if (pasy.IsAlive() == false) {
+            Destroy(gameObject);
+        }
 	}
 }
