@@ -40,15 +40,25 @@ public class PlayerController2 : MonoBehaviour {
         hookControls();
         drawLines();
         animations();
+
         if (transform.position.y < -10) {  //rotkokuolema
             Die();
         }
 
+        //paskafixi maan kaltevuuteen alkaa
         GetComponent<CircleCollider2D>().enabled = false;
         RaycastHit2D hitdown;
         hitdown = Physics2D.Raycast(transform.position , Vector2.down, 1f);
         Debug.Log(" Normal : " + hitdown.normal);
         GetComponent<CircleCollider2D>().enabled = true;
+        if (hitdown.normal.x < -0.1f) {
+            Debug.Log("extraforce right");
+            rigidBody.AddForce(Vector2.right * 3f);
+        }
+        if (hitdown.normal.x > 0.1f) {
+            rigidBody.AddForce(Vector2.right * -3f);
+        }
+        //loppuu
 
     }
 
