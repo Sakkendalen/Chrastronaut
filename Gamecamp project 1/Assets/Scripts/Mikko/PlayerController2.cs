@@ -49,17 +49,20 @@ public class PlayerController2 : MonoBehaviour {
         GetComponent<CircleCollider2D>().enabled = false;
         RaycastHit2D hitdown;
         hitdown = Physics2D.Raycast(transform.position , Vector2.down, 1f);
-        Debug.Log(" Normal : " + hitdown.normal);
+        //Debug.Log(" Normal : " + hitdown.normal);
         GetComponent<CircleCollider2D>().enabled = true;
         if (hitdown.normal.x < -0.1f) {
-            Debug.Log("extraforce right");
+            //Debug.Log("extraforce right");
             rigidBody.AddForce(Vector2.left * hitdown.normal.x * 7f);
         }
         if (hitdown.normal.x > 0.1f) {
-            Debug.Log("extraforce left");
+            //Debug.Log("extraforce left");
             rigidBody.AddForce(Vector2.left * hitdown.normal.x * 7f);
         }
         //loppuu
+
+        //Debug.Log(" X " + movementx + "    Y " + movementy);
+        Debug.DrawRay(transform.position, new Vector3 (rigidBody.velocity.x +movementx, 3f +movementy, 0f), Color.green);
 
     }
 
