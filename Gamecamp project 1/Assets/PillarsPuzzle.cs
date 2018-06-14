@@ -9,6 +9,10 @@ public class PillarsPuzzle : MonoBehaviour {
 
     public GameObject Bridge;
     public GameObject Pillar1;
+    public GameObject Pillar3;
+    public GameObject Pillar4;
+    public GameObject FaultyRuins1;
+    public GameObject FaultyRuins2;
 
     bool state;
     int cooldown;
@@ -18,7 +22,11 @@ public class PillarsPuzzle : MonoBehaviour {
 	void Start () {
         state = false;
         cooldown = 0;
-	}
+        Pillar3.SetActive(false);
+        Pillar4.SetActive(false);
+        FaultyRuins1.SetActive(true);
+        FaultyRuins2.SetActive(true);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,12 +41,20 @@ public class PillarsPuzzle : MonoBehaviour {
         if (state == false && cooldown == 0) {
             Bridge.GetComponent<Renderer>().material = Cmaterial;
             Pillar1.GetComponent<Renderer>().material = Cmaterial;
+            Pillar3.SetActive(true);
+            Pillar4.SetActive(true);
+            FaultyRuins1.SetActive(false);
+            FaultyRuins2.SetActive(false);
             state = true;
             cooldown = 100;
         }
         else if (state == true && cooldown == 0) {
             Bridge.GetComponent<Renderer>().material = Wmaterial1;
             Pillar1.GetComponent<Renderer>().material = Wmaterial1;
+            Pillar3.SetActive(false);
+            Pillar4.SetActive(false);
+            FaultyRuins1.SetActive(true);
+            FaultyRuins2.SetActive(true);
             state = false;
             cooldown = 600;
         }
