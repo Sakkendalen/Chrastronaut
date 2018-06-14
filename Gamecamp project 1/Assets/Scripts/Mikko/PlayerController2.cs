@@ -62,7 +62,7 @@ public class PlayerController2 : MonoBehaviour {
         //loppuu
 
         //Debug.Log(" X " + movementx + "    Y " + movementy);
-        Debug.DrawRay(transform.position, new Vector3 (rigidBody.velocity.x +movementx, 3f +movementy, 0f), Color.green);
+        Debug.DrawRay(transform.position, new Vector3 (movementx *5, movementy *5, 0f), Color.green);
 
     }
 
