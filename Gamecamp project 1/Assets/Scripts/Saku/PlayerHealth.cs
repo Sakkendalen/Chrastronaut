@@ -11,12 +11,21 @@ public class PlayerHealth : MonoBehaviour {
     public float MaxHealth;
     private float CurrentHealth;
     Rigidbody2D rb;
+    int InvulnerabilityTimer;
 
 
-	void Start () {
+
+    void Start () {
 		CurrentHealth = MaxHealth;
         rb = GetComponent<Rigidbody2D>();
+        InvulnerabilityTimer = 0;
 	}
+
+    void Update() {
+        if (InvulnerabilityTimer > 0) {
+            InvulnerabilityTimer--;
+        }
+    }
 	
 	public void DisplayHealth (){
 
@@ -40,10 +49,11 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	public void LoseHealth (){
 
-		if (CurrentHealth <= 3 && CurrentHealth > 0){
+		if (CurrentHealth <= 3 && CurrentHealth > 0 && InvulnerabilityTimer == 0){
 			CurrentHealth--;
 			Debug.Log("Ouch");
 			DisplayHealth();
+            InvulnerabilityTimer = 10;
 		}
 
 	}

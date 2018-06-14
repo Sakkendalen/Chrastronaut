@@ -25,7 +25,7 @@ public class PathFollower : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime * speed;
 
-        if (assignedObject.transform.position.z < 1f && assignedObject.transform.position.z > -1f) {    //Collider hallinta
+        if (bird.transform.position.z < 1f && bird.transform.position.z > -1f) {    //Collider hallinta
             bird.GetComponent<CircleCollider2D>().enabled = true;
         }
         else {
@@ -40,11 +40,13 @@ public class PathFollower : MonoBehaviour {
 
 
             //ROTATION JUTTUJA
+
             _direction = (assignedObject.transform.position - bird.transform.position);
             _lookRotation = Quaternion.LookRotation(_direction);
-
             bird.transform.rotation = Quaternion.Slerp(bird.transform.rotation, _lookRotation, Time.deltaTime * 3f); //toimiva rotate
-            //assignedObject.transform.LookAt(currentPositionHolder);
+            
+            
+            bird.transform.LookAt(assignedObject.transform.position);
 
             //assignedObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, currentPositionHolder, 1f);
 

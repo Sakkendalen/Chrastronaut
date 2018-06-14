@@ -222,7 +222,7 @@ public class PlayerController2 : MonoBehaviour {
             }
             else {
                 Debug.Log("vihollinen gyökkää");
-                rigidBody.AddForce(new Vector2(4 * (transform.position.x - collision.gameObject.transform.position.x), 5f), ForceMode2D.Impulse);
+                rigidBody.AddForce(new Vector2(1.5f * (transform.position.x - collision.gameObject.transform.position.x), 2f), ForceMode2D.Impulse);
                 gameObject.GetComponent<PlayerHealth>().LoseHealth();
                 //Die();
             }
@@ -231,11 +231,11 @@ public class PlayerController2 : MonoBehaviour {
         if (collision.gameObject.tag == "EnemySpikes") {
 
             if (transform.position.x < collision.gameObject.transform.position.x) {
-                rigidBody.AddForce(new Vector2 (-3f, 2f), ForceMode2D.Impulse);
+                rigidBody.AddForce(new Vector2 (-2f, 2f), ForceMode2D.Impulse);
                 gameObject.GetComponent<PlayerHealth>().LoseHealth();
             }
             else {
-                rigidBody.AddForce(new Vector2(3, 2f), ForceMode2D.Impulse);
+                rigidBody.AddForce(new Vector2(2, 2f), ForceMode2D.Impulse);
                 gameObject.GetComponent<PlayerHealth>().LoseHealth();
             }
             //rigidBody.AddForce(new Vector2(400 * (transform.position.x - collision.gameObject.transform.position.x), 100f));
