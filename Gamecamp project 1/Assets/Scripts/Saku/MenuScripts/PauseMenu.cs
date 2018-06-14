@@ -7,8 +7,8 @@ public class PauseMenu : MonoBehaviour {
      public Transform canvas;
          
 	public static bool isPaused;
-     // Update is called once per frame
-     void Update () {
+
+    public void Update () {
  
          if (Input.GetKeyDown (KeyCode.Escape)) {
              
@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour {
                  Time.timeScale = 1;
 				 isPaused = false;
              }
-         } 
+         }
      }
+     
  }

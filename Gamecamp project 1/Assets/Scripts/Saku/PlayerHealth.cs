@@ -29,12 +29,9 @@ public class PlayerHealth : MonoBehaviour {
 			Heart3.enabled = false;
 		}
 		else if (CurrentHealth == 1){
-			Heart3.enabled = false;
 			Heart2.enabled = false;
 		}
 		else{
-			Heart3.enabled = false;
-			Heart2.enabled = false;
 			Heart1.enabled = false;
 			CurrentHealth = MaxHealth;
 			gameObject.GetComponent<PlayerController2>().Die();
