@@ -686,6 +686,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aae5cb51aef2b2a45ac3023ddd74d308, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &334391308 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114284776363806820, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &342950297 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1378010527319550, guid: 60dc12971b5ec0c458aea5483a4bd47d,
@@ -1289,7 +1295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1319751615027824, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
@@ -2120,6 +2126,12 @@ PolygonCollider2D:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 648f4161a6fe56b4e922a59317962dd5, type: 3}
   m_PrefabInternal: {fileID: 1445918638}
+--- !u!114 &1664811429 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114675756014557502, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1686518115
 Prefab:
   m_ObjectHideFlags: 0
@@ -2182,6 +2194,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f67f527da309514c9d21b20b0158517, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &1732194605 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114618261519360608, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1754700551
 Prefab:
   m_ObjectHideFlags: 0
@@ -2393,6 +2411,21 @@ Prefab:
       propertyPath: jetPackEnergyBar
       value: 
       objectReference: {fileID: 1793431411}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: Heart1
+      value: 
+      objectReference: {fileID: 334391308}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: Heart2
+      value: 
+      objectReference: {fileID: 1664811429}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: Heart3
+      value: 
+      objectReference: {fileID: 1732194605}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
