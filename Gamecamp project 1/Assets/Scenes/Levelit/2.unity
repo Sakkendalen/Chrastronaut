@@ -909,6 +909,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5b61c4334297e441ae5eab830e74a83, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &484551904 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114069166997882750, guid: b5b61c4334297e441ae5eab830e74a83,
+    type: 2}
+  m_PrefabInternal: {fileID: 484551903}
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &497503368
 Prefab:
   m_ObjectHideFlags: 0
@@ -1297,9 +1303,19 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 484551904}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &836913518 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224796036859595218, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 836913517}
 --- !u!1001 &927913353
 Prefab:
   m_ObjectHideFlags: 0
@@ -2426,6 +2442,11 @@ Prefab:
       propertyPath: Heart3
       value: 
       objectReference: {fileID: 1732194605}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 836913518}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
