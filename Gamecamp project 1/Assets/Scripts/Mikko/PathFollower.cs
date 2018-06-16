@@ -54,11 +54,11 @@ public class PathFollower : MonoBehaviour {
             //assignedObject.transform.rotation = Quaternion.LookRotation(lookDirection);
             //assignedObject.GetComponent<Rigidbody>().AddForce((currentPositionHolder - assignedObject.transform.position) * speed);
 
-            Debug.Log("Im going for node " + currentNode);
+            //Debug.Log("Im going for node " + currentNode);
         }
         else {
 
-            Debug.Log("" + currentNode);
+            //Debug.Log("" + currentNode);
 
             if (currentNode < pathNode.Length - 1) {    //go for next node
                 currentNode++;
