@@ -8,6 +8,11 @@ public class PauseMenu : MonoBehaviour {
          
 	public bool isPaused;
 
+    void Start(){
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+
     public void Update () {
  
         if (Input.GetKeyDown (KeyCode.Escape)) {
@@ -16,13 +21,11 @@ public class PauseMenu : MonoBehaviour {
                 canvas.gameObject.SetActive (true);
                 Time.timeScale = 0;
                 isPaused = true;
-            } else 
-            {
+            } else {
                 canvas.gameObject.SetActive (false);
                 Time.timeScale = 1;
                 isPaused = false;
             }
         }
     }
-    
 }

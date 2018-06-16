@@ -1206,11 +1206,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224785509627800636, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 224785509627800636, guid: 2e0ac3384fffc3541ab919166a516c91,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1299,11 +1294,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1319751615027824, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 484551904}
+    - target: {fileID: 114212343260425160, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
       propertyPath: eventSystem
       value: 
@@ -1313,7 +1309,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!224 &836913518 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224796036859595218, guid: 2e0ac3384fffc3541ab919166a516c91,
+  m_PrefabParentObject: {fileID: 224173913798793070, guid: 2e0ac3384fffc3541ab919166a516c91,
     type: 2}
   m_PrefabInternal: {fileID: 836913517}
 --- !u!1001 &927913353
