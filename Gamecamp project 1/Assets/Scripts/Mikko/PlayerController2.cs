@@ -137,11 +137,19 @@ public class PlayerController2 : MonoBehaviour {
         }
 
 
-        if (Input.GetButtonDown("Fire1") && fist.GetComponent<Fist2>().GetState() == 1) {
+        if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire1J")) && fist.GetComponent<Fist2>().GetState() == 1) {
             GetComponent<CircleCollider2D>().enabled = false;                                       //RAYCASTI KOHTEESEEN
             //hit = Physics2D.Raycast(transform.position, new Vector2(rigidBody.velocity.x, 5f), 7f);//Vaihtoehtoinen velocityohjaus
             //hit = Physics2D.Raycast(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2), 7f);//vaihtoehtoinen hiiriohjaus
-            hit = Physics2D.Raycast(transform.position, mousePosition - transform.position, 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
+            if (Input.GetButtonDown("Fire1")) {
+                hit = Physics2D.Raycast(transform.position, mousePosition - transform.position, 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
+                Debug.Log("HiiriFire");
+            }
+            if (Input.GetButtonDown("Fire1J")) {
+                hit = Physics2D.Raycast(transform.position, new Vector3(movementx , movementy, 0f), 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
+                Debug.Log("JoiskaFire");
+            }
+
 
             GetComponent<CircleCollider2D>().enabled = true;                                        //RAYCASTI KOHTEESEEN
             //Debug.Log("mouse X : " + Input.mousePosition);
@@ -153,17 +161,34 @@ public class PlayerController2 : MonoBehaviour {
             else {
                 //Ray2D ray = new Ray2D(transform.position, new Vector2(rigidBody.velocity.x, 5f)); //vaihtopehtoinen velocityohjaus
                 //Ray2D ray = new Ray2D(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2));    //hiiriohjaus
-                Ray2D ray = new Ray2D(transform.position, mousePosition - transform.position);
-                ray.GetPoint(7f);
-                fist.GetComponent<Fist2>().SetFistState(2);
-                fist.GetComponent<Fist2>().SetFistTarget(new Vector2(ray.GetPoint(7f).x, ray.GetPoint(7f).y));
+                Ray2D ray;
+                if (Input.GetButtonDown("Fire1")) {
+                     ray = new Ray2D(transform.position, mousePosition - transform.position);
+                    ray.GetPoint(7f);
+                    fist.GetComponent<Fist2>().SetFistState(2);
+                    fist.GetComponent<Fist2>().SetFistTarget(new Vector2(ray.GetPoint(7f).x, ray.GetPoint(7f).y));
+                }
+                if (Input.GetButtonDown("Fire1J")) {
+                    ray = new Ray2D(transform.position, new Vector2(movementx,movementy));
+                    ray.GetPoint(7f);
+                    fist.GetComponent<Fist2>().SetFistState(2);
+                    fist.GetComponent<Fist2>().SetFistTarget(new Vector2(ray.GetPoint(7f).x, ray.GetPoint(7f).y));
+                }
+
+
+                //ray.GetPoint(7f);
+                //fist.GetComponent<Fist2>().SetFistState(2);
+                //fist.GetComponent<Fist2>().SetFistTarget(new Vector2(ray.GetPoint(7f).x, ray.GetPoint(7f).y));
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && fist.GetComponent<Fist2>().GetState() == 4) {
+        if ( (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire1J")) && fist.GetComponent<Fist2>().GetState() == 4) {
             fist.GetComponent<Fist2>().SetFistState(3);
         }
     }
+
+
+
 
     void drawLines() {
         GetComponent<LineRenderer>().SetPosition(1, transform.position);
