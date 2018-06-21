@@ -20,6 +20,9 @@ public class PlayerController2 : MonoBehaviour {
     public Vector2 CheckpoinPosition;
     Vector2 startposition;
 
+    public GameObject GunSound;
+    public GameObject OuchSound;
+
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -150,6 +153,8 @@ public class PlayerController2 : MonoBehaviour {
                 Debug.Log("JoiskaFire");
             }
 
+            Instantiate(GunSound, transform.position, transform.rotation); //gun sound
+
 
             GetComponent<CircleCollider2D>().enabled = true;                                        //RAYCASTI KOHTEESEEN
             //Debug.Log("mouse X : " + Input.mousePosition);
@@ -256,6 +261,8 @@ public class PlayerController2 : MonoBehaviour {
         }
 
         if (collision.gameObject.tag == "EnemySpikes") {
+
+            Instantiate(OuchSound, transform.position, transform.rotation);
 
             if (transform.position.x < collision.gameObject.transform.position.x) {
                 rigidBody.AddForce(new Vector2 (-2f, 2f), ForceMode2D.Impulse);

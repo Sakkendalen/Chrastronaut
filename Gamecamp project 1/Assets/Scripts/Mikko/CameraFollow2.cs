@@ -12,11 +12,13 @@ public class CameraFollow2 : MonoBehaviour {
     Vector3 velocityOffset;
     public bool playerAliveMovement;
     Vector3 desiredPosition;
+    Vector3 gamePlayZoomouts;
 
     void Start() {
         rb = target.GetComponent<Rigidbody2D>();
         Vector3 velocityOffset = new Vector3(0, 0, 0);
         playerAliveMovement = true;
+        gamePlayZoomouts = new Vector3(0, 0, 0);
     }
 
     private void FixedUpdate() {
@@ -29,7 +31,7 @@ public class CameraFollow2 : MonoBehaviour {
             Debug.Log("Kamera liikkuu ilman velocitya");
         }
         else {                                 //jos pelaaja on elossa kemra liikkuu näin
-            desiredPosition = target.transform.position + offset - velocityOffset / 2;
+            desiredPosition = target.transform.position + offset - velocityOffset / 2 +gamePlayZoomouts;
         }
 
         //desiredPosition = target.transform.position + offset - velocityOffset / 2; //alkuperäinen perusliiktuus
@@ -37,6 +39,12 @@ public class CameraFollow2 : MonoBehaviour {
         Vector3 smoothedPosition = Vector3.Slerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 
+        gamePlayZoomouts = gamePlayZoomouts / 1.005f;
+
         //transform.LookAt(target);
+    }
+
+    public void SetZoomout(float x, float y, float z) {
+        gamePlayZoomouts = new Vector3(x, y, z);
     }
 }
