@@ -22,6 +22,8 @@ public class PlayerController2 : MonoBehaviour {
 
     public GameObject GunSound;
     public GameObject OuchSound;
+    public GameObject TouchGroundSound;
+    int TouchGroundSoundDelay;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,7 @@ public class PlayerController2 : MonoBehaviour {
         walkleft = false;
         idle = false;
         startposition = transform.position;
+        TouchGroundSoundDelay = 0;
     }
 	
 	// Update is called once per frame
@@ -48,6 +51,9 @@ public class PlayerController2 : MonoBehaviour {
 
             if (transform.position.y < -10) {  //rotkokuolema
                 Die();
+            }
+            if ( TouchGroundSoundDelay > 0) {
+                TouchGroundSoundDelay--;
             }
 
             //paskafixi maan kaltevuuteen alkaa
@@ -92,6 +98,7 @@ public class PlayerController2 : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump") && isTouchingGround) {          //HYPPY
             rigidBody.AddForce(new Vector2(0, 200));
+            TouchGroundSoundDelay = 15;
             isTouchingGround = false;
         }
         if (Input.GetButtonDown("Jump") && fist.GetComponent<Fist2>().GetState() == 4) { //jos painetaan hyppyä ilmassa irrotetaan koukku
@@ -231,18 +238,30 @@ public class PlayerController2 : MonoBehaviour {
         //Debug.Log("left : " + walkleft +" ground : " +isTouchingGround +" idle : " +idle);
     }
 
+
+
+
     void checkGround() {
         //Vector2 rayOrigin = GetComponent<CircleCollider2D>().bounds.center;
 
-        float rayDistance = GetComponent<CircleCollider2D>().bounds.extents.y + 0.1f;
+        float rayDistance = GetComponent<CircleCollider2D>().bounds.extents.y + 0.15f;
 
         if (Physics2D.Raycast(transform.position + new Vector3 (0, -rayDistance, 0) , Vector2.down, 0.1f ) ) {
+
+            if (isTouchingGround == false && TouchGroundSoundDelay == 0) {    //play touchGroundSound
+                Instantiate(GunSound, transform.position, transform.rotation);
+                Debug.Log("groundsound played");
+            }
+
             isTouchingGround = true;
         }
         else {
             isTouchingGround = false;
         }
     }
+
+
+
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
