@@ -50,7 +50,7 @@ public class PlayerController2 : MonoBehaviour {
             animations();
 
             if (transform.position.y < -10) {  //rotkokuolema
-                Die();
+                //Die();
             }
             if ( TouchGroundSoundDelay > 0) {
                 TouchGroundSoundDelay--;

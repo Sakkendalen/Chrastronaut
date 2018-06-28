@@ -11,6 +11,7 @@ public class CameraFollow2 : MonoBehaviour {
     Rigidbody2D rb;
     Vector3 velocityOffset;
     public bool playerAliveMovement;
+    public bool lookPlayer;
     Vector3 desiredPosition;
     Vector3 gamePlayZoomouts;
 
@@ -19,6 +20,7 @@ public class CameraFollow2 : MonoBehaviour {
         Vector3 velocityOffset = new Vector3(0, 0, 0);
         playerAliveMovement = true;
         gamePlayZoomouts = new Vector3(0, 0, 0);
+        lookPlayer = false;
     }
 
     private void FixedUpdate() {
@@ -41,10 +43,16 @@ public class CameraFollow2 : MonoBehaviour {
 
         gamePlayZoomouts = gamePlayZoomouts / 1.005f;
 
+        if (lookPlayer) {
+            Vector3 newDir = Vector3.RotateTowards(transform.forward , target.transform.position - transform.position, 0.3f *Time.deltaTime, 1f);
+            transform.rotation = Quaternion.LookRotation(newDir);
+        }
+
         //transform.LookAt(target);
     }
 
     public void SetZoomout(float x, float y, float z) {
         gamePlayZoomouts = new Vector3(x, y, z);
+        Debug.Log(gamePlayZoomouts);
     }
 }
