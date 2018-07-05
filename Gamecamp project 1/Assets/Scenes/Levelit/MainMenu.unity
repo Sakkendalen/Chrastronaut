@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 198351995}
   - component: {fileID: 198351994}
   - component: {fileID: 198351993}
+  - component: {fileID: 198351996}
   m_Layer: 5
   m_Name: Level3Button
   m_TagString: Untagged
@@ -454,7 +455,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 198351994}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 198351996}
+        m_MethodName: LoadByIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &198351994
@@ -490,6 +502,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198351991}
+--- !u!114 &198351996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198351991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ec630e19d0d1a4583a584a3b754580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225106715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,8 +1428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 188, y: -69.22045}
-  m_SizeDelta: {x: 196, y: 8.440908}
+  m_AnchoredPosition: {x: 480.00006, y: -116.23865}
+  m_SizeDelta: {x: 780.0001, y: 102.477295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802098536
 MonoBehaviour:
@@ -1666,6 +1689,7 @@ GameObject:
   - component: {fileID: 1045284731}
   - component: {fileID: 1045284730}
   - component: {fileID: 1045284729}
+  - component: {fileID: 1045284733}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1752,6 +1776,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1045284733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045284728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2e0137303224a42b128d7a837a67e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1074483892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,8 +2120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 188, y: -125.84488}
-  m_SizeDelta: {x: 196, y: 104.807945}
+  m_AnchoredPosition: {x: 480.00006, y: -284.6065}
+  m_SizeDelta: {x: 780.0001, y: 234.25836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099079695
 MonoBehaviour:
@@ -2109,7 +2144,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
-    m_FontSize: 24
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2120,12 +2155,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
+  m_Text: 'Oh no! Your spaceship has crashed at unknown planet.
+
+    Get past 3 different levels to get out of this forsaken planet.
+
+    Use A and D to move, Space to hover, Mouse leftclick to shoot your grappling hook.
+
+    (you can swing by A & D and adjust your height by W & S)
+
+    And remember to keep your life above 1!'
 --- !u!222 &1099079696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2393,8 +2431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 188, y: -183.52443}
-  m_SizeDelta: {x: 196, y: 10.551135}
+  m_AnchoredPosition: {x: 480.00006, y: -459.6207}
+  m_SizeDelta: {x: 780.0001, y: 115.77008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415879296
 MonoBehaviour:

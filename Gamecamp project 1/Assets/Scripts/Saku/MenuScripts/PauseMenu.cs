@@ -4,8 +4,9 @@
 
 public class PauseMenu : MonoBehaviour {
 
-    public Transform canvas;
-         
+    public Transform menucanvas;
+    public Transform helpCanvas;
+    public Transform deathcanvas;
 	public bool isPaused;
 
     void Start(){
@@ -14,18 +15,22 @@ public class PauseMenu : MonoBehaviour {
     }
 
     public void Update () {
- 
+
         if (Input.GetKeyDown (KeyCode.Escape)) {
-            
-            if (canvas.gameObject.activeInHierarchy == false) {  
-                canvas.gameObject.SetActive (true);
-                Time.timeScale = 0;
+            if (menucanvas.gameObject.activeInHierarchy == false && helpCanvas.gameObject.activeInHierarchy == false) {  
+                menucanvas.gameObject.SetActive (true);
                 isPaused = true;
+                Time.timeScale = 0;
             } else {
-                canvas.gameObject.SetActive (false);
-                Time.timeScale = 1;
+                menucanvas.gameObject.SetActive (false);
+                helpCanvas.gameObject.SetActive (false);
                 isPaused = false;
+                Time.timeScale = 1;
             }
+        } else if (gameObject.GetComponent<PlayerController2>().isDead == true){
+            deathcanvas.gameObject.SetActive (true);
+            Time.timeScale = 0;
+            isPaused = true;
         }
     }
 }

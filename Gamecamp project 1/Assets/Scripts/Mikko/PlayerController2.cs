@@ -24,7 +24,7 @@ public class PlayerController2 : MonoBehaviour {
     public GameObject OuchSound;
     public GameObject TouchGroundSound;
     int TouchGroundSoundDelay;
-
+    public bool isDead = false;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -299,7 +299,6 @@ public class PlayerController2 : MonoBehaviour {
     public void Die() {
 
         rigidBody.velocity = Vector2.zero;
-        Debug.Log("Resetting velocity");
 
         if (CheckpoinPosition != null){
             transform.position = CheckpoinPosition;

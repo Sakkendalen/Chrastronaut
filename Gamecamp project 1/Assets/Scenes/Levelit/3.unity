@@ -2783,6 +2783,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1022299496592626, guid: fca5b9f277909e94d811b69c739fbfef,
         type: 2}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: menucanvas
+      value: 
+      objectReference: {fileID: 1998978414}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: helpCanvas
+      value: 
+      objectReference: {fileID: 1998978413}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: deathcanvas
+      value: 
+      objectReference: {fileID: 2145005773}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
@@ -3037,6 +3052,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1998978413 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224173913798793070, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1998978412}
+--- !u!224 &1998978414 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224678451788748230, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1998978412}
 --- !u!1001 &2013431837
 Prefab:
   m_ObjectHideFlags: 0

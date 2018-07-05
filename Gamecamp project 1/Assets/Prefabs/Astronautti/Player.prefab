@@ -1512,6 +1512,8 @@ MonoBehaviour:
   jetPackEnergyBar: {fileID: 0}
   maxEnergy: 30
   jetPackPower: 11
+  JetPackSound: {fileID: 1597158382141792, guid: ecaf4b15e20a23842833fbb3a84001f7,
+    type: 2}
   smoke: {fileID: 1512763502779854}
 --- !u!114 &114110107771447576
 MonoBehaviour:
@@ -1539,6 +1541,10 @@ MonoBehaviour:
   fist: {fileID: 0}
   hookMaxDistance: 7
   CheckpoinPosition: {x: 0, y: 0}
+  GunSound: {fileID: 1995004195345574, guid: af06476ce69152a43aa6ab5b33e3050a, type: 2}
+  OuchSound: {fileID: 1022299496592626, guid: fca5b9f277909e94d811b69c739fbfef, type: 2}
+  TouchGroundSound: {fileID: 0}
+  isDead: 0
 --- !u!114 &114562007824289628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1565,7 +1571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff3dc1717020614bb6c6fdb2c68e829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  menucanvas: {fileID: 0}
+  helpCanvas: {fileID: 0}
+  deathcanvas: {fileID: 0}
   isPaused: 0
 --- !u!120 &120402044840251968
 LineRenderer:

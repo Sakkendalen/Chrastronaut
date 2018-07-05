@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-	// Use this for initialization
+	// Only used for set particle effects on in the Mainmenu!
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		Time.timeScale = 1;
 	}
 }

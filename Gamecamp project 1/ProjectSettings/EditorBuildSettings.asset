@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levelit/2.unity
     guid: 759ffc060409c2c43bf60e52e6513d1c
+  - enabled: 1
+    path: Assets/Scenes/Levelit/3.unity
+    guid: 31c5e02b6ae5a4049a70add1f5bd15cb
   m_configObjects: {}

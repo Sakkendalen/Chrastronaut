@@ -43,6 +43,7 @@ public class PlayerHealth : MonoBehaviour {
 		else{
 			Heart1.enabled = false;
 			CurrentHealth = MaxHealth;
+			gameObject.GetComponent<PlayerController2>().isDead = true;
 			gameObject.GetComponent<PlayerController2>().Die();
 		}
 
@@ -65,5 +66,14 @@ public class PlayerHealth : MonoBehaviour {
 			DisplayHealth();
 		}
 
+	}
+
+	//DeathCanvas player spawn on click.
+	public void SpawnOnClick (){
+		gameObject.GetComponent<PauseMenu>().deathcanvas.gameObject.SetActive (false);
+		gameObject.GetComponent<PauseMenu>().isPaused = false;
+		gameObject.GetComponent<PlayerController2>().isDead = false;
+		gameObject.GetComponent<PlayerController2>().Die();
+		Time.timeScale = 1;
 	}
 }
