@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: f098218414b13d74fa32e504770cba7d
+guid: a54d217311eb44748bb92e1fe6111c6c
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.004
+    2100000: Material.001
     2300000: //RootNode
     3300000: //RootNode
-    4300000: talo1
+    4300000: talo15
   externalObjects: {}
   materials:
     importMaterials: 1

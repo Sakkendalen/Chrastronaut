@@ -3,17 +3,12 @@ guid: 6ed5296008d8bcd42a6ab09d33d1f00a
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: highrise_13
-    100002: Lamp
-    100004: //RootNode
-    400000: highrise_13
-    400002: Lamp
-    400004: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: Material.001
-    2300000: highrise_13
-    3300000: highrise_13
-    4300000: highrise_13
-    10800000: Lamp
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: talo2
   externalObjects: {}
   materials:
     importMaterials: 1
