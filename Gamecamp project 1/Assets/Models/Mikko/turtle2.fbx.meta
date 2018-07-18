@@ -1,17 +1,31 @@
 fileFormatVersion: 2
-guid: 843bcbbd62f3532488bfbce0806b8168
+guid: f540313efe594a847a10ce35c7689f59
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: heart
-    100002: //RootNode
-    400000: heart
-    400002: //RootNode
-    2100000: heartMat
-    2300000: heart
-    3300000: heart
-    4300000: heart
-    2186277476908879412: ImportLogs
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.004_end
+    100014: Sphere
+    100016: //RootNode
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.004_end
+    400014: Sphere
+    400016: //RootNode
+    2100000: Material.001
+    4300000: Sphere
+    7400000: Armature|Swim
+    9500000: //RootNode
+    13700000: Sphere
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -39,7 +53,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Swim
+      takeName: Armature|Swim
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -87,7 +129,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
