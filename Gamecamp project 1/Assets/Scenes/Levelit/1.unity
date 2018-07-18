@@ -3056,36 +3056,6 @@ CircleCollider2D:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a77c33c235e210243b7eae17a2454ca3, type: 3}
   m_PrefabInternal: {fileID: 496579583}
---- !u!114 &569054548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569054547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1722039286}
-          m_MethodName: FadeToNextLevel
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!4 &569054550 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a77c33c235e210243b7eae17a2454ca3, type: 3}
@@ -9442,12 +9412,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1722039286 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114210739400889440, guid: 831d80dad6381a048a3444e81cbfe5e0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1722039285}
-  m_Script: {fileID: 11500000, guid: 63a4ad8fa774d1546a3076bb0478768d, type: 3}
 --- !u!1 &1726332850 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ed538105b6a57424ea21c9e803849f5e, type: 3}

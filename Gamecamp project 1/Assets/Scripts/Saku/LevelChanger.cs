@@ -8,9 +8,9 @@ public class LevelChanger : MonoBehaviour {
 	private int LevelToLoad;
 
 	void Update () {
-		if (Input.GetMouseButtonDown(0)){
-			FadeToNextLevel();
-		}
+		// if (Input.GetMouseButtonDown(0)){
+		// 	FadeToNextLevel();
+		// }
 	}
 	public void FadeToNextLevel () {
 		FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
