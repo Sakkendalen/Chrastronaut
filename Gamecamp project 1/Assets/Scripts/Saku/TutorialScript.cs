@@ -5,12 +5,12 @@ using UnityEngine;
 public class TutorialScript : MonoBehaviour {
 	
 
-	public object JetpackCanvas;
+	// public Transform JetpackCanvas;
 
 	void Update () {
 
-		if(JetpackCanvas.Object.active){
+		// if(JetpackCanvas.activeSelf){
 
-		}
+		// }
 	}
 }
