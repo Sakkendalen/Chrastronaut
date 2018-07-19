@@ -4,6 +4,9 @@ public class CheckPoint : MonoBehaviour
 {
     // have we been triggered?
     bool triggered;
+
+    public GameObject cpParticle;
+
     void Awake()
     {
         triggered = false;
@@ -25,6 +28,7 @@ public class CheckPoint : MonoBehaviour
             {
                 Trigger(collider.gameObject);
                 triggered = true;
+                cpParticle.SetActive(true);
             }
         }
     }

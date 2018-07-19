@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - EnemySpikes
   - Health
+  - CPParticle
   layers:
   - Default
   - TransparentFX
