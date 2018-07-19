@@ -30,13 +30,22 @@ public class LevelChanger : MonoBehaviour {
 	}
 
 	public void FadeToNextLevel () {
-		FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+		if(SceneManager.GetActiveScene().buildIndex == 3){
+			FadeToLevel(0);
+		} else {
+			FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+		}
 	}
 
 	public void FadeToLevel(int levelIndex) {
 
-		LevelToLoad = levelIndex;
-		animator.SetTrigger("FadeOut");
+		if(levelIndex == 3){
+			LevelToLoad = levelIndex;
+		}
+		else {
+			LevelToLoad = levelIndex;
+			animator.SetTrigger("FadeOut");
+		}
 	}
 
 	public void OnFadeComplete(){
