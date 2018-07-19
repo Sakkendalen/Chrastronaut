@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 843bcbbd62f3532488bfbce0806b8168
+guid: 54fece96e9927ba4d8401141e14c9fd0
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: heart
-    100002: //RootNode
-    400000: heart
-    400002: //RootNode
-    2100000: heartMat
-    2300000: heart
-    3300000: heart
-    4300000: heart
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    400000: //RootNode
+    2100000: No Name
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cone
   externalObjects: {}
   materials:
     importMaterials: 1
