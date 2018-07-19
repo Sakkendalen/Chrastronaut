@@ -8542,11 +8542,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114425079751595832, guid: 2e0ac3384fffc3541ab919166a516c91,
+    - target: {fileID: 114446883067813744, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: eventSystem
       value: 
-      objectReference: {fileID: 1447138811}
+      objectReference: {fileID: 1856039950}
     - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
       propertyPath: eventSystem
@@ -8557,11 +8557,11 @@ Prefab:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1856039950}
-    - target: {fileID: 114446883067813744, guid: 2e0ac3384fffc3541ab919166a516c91,
+    - target: {fileID: 114425079751595832, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
-      propertyPath: eventSystem
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1856039950}
+      objectReference: {fileID: 1447138811}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
   m_IsPrefabParent: 0

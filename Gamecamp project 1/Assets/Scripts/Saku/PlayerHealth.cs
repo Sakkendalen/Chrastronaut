@@ -27,20 +27,34 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 	
-	public void DisplayHealth (){
+	/*int deathreason checks if player died by monsters or by falling to gap to know how to work out with SpawnOnCLick.
+	 0 = monsters.
+	 1 = Gap
+	*/
+	public void DisplayHealth (int DeathReason){
 
-		if (CurrentHealth == 3){
-			Heart3.enabled = true;
-			Heart2.enabled = true;
-			Heart1.enabled = true;
+		if(DeathReason == 0){
+			if (CurrentHealth == 3){
+				Heart3.enabled = true;
+				Heart2.enabled = true;
+				Heart1.enabled = true;
+			}
+			else if (CurrentHealth == 2){
+				Heart3.enabled = false;
+			}
+			else if (CurrentHealth == 1){
+				Heart2.enabled = false;
+			}
+			else{
+				Heart1.enabled = false;
+				CurrentHealth = MaxHealth;
+				gameObject.GetComponent<PlayerController2>().isDead = true;
+				gameObject.GetComponent<PlayerController2>().Die();
+			}
 		}
-		else if (CurrentHealth == 2){
+		else {
 			Heart3.enabled = false;
-		}
-		else if (CurrentHealth == 1){
 			Heart2.enabled = false;
-		}
-		else{
 			Heart1.enabled = false;
 			CurrentHealth = MaxHealth;
 			gameObject.GetComponent<PlayerController2>().isDead = true;
@@ -53,7 +67,7 @@ public class PlayerHealth : MonoBehaviour {
 		if (CurrentHealth <= 3 && CurrentHealth > 0 && InvulnerabilityTimer == 0){
 			CurrentHealth--;
 			Debug.Log("Ouch");
-			DisplayHealth();
+			DisplayHealth(0);
             InvulnerabilityTimer = 10;
 		}
 
@@ -63,7 +77,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (CurrentHealth < 3){
 			CurrentHealth++;
-			DisplayHealth();
+			DisplayHealth(0);
 		}
 
 	}

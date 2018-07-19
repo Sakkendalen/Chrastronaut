@@ -6,6 +6,6 @@ using UnityEngine;
 public class GapDeath : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D Player){
-		Player.gameObject.GetComponent<PlayerController2>().Die();
+		Player.gameObject.GetComponent<PlayerHealth>().DisplayHealth(1);
 	}
 }

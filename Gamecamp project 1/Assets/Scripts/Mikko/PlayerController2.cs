@@ -302,11 +302,11 @@ public class PlayerController2 : MonoBehaviour {
 
         if (CheckpoinPosition != null){
             transform.position = CheckpoinPosition;
-            gameObject.GetComponent<PlayerHealth>().DisplayHealth();
+            gameObject.GetComponent<PlayerHealth>().DisplayHealth(0);
         }
         else{
             transform.position = startposition;
-            gameObject.GetComponent<PlayerHealth>().DisplayHealth();
+            gameObject.GetComponent<PlayerHealth>().DisplayHealth(0);
         }
 
         //gameCamera.GetComponent<CameraFollow2>().playerAliveMovement = false; //pelaaja on kuollut ja asetetaan kameran liikkumismoodi sellaiseksi
