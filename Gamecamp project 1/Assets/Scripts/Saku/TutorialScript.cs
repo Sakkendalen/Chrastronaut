@@ -9,8 +9,8 @@ public class TutorialScript : MonoBehaviour {
 
 	void Update () {
 
-		if(JetpackCanvas.Object.active){
+		//if(JetpackCanvas.Object.active){
 
-		}
+		//}
 	}
 }
