@@ -7,6 +7,7 @@ public class bubblescript : MonoBehaviour {
     Vector3 startpos;
     bool isFistConnected;
     GameObject fist;
+    public GameObject poks;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class bubblescript : MonoBehaviour {
                 fist.GetComponent<Fist2>().SetFistState(3);
             }
 
+            Instantiate(poks, transform.position, transform.rotation);
             Destroy(gameObject);
         }
 	}
