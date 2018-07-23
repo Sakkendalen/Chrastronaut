@@ -28,8 +28,8 @@ public class PlayerHealth : MonoBehaviour {
     }
 	
 	/*int deathreason checks if player died by monsters or by falling to gap to know how to work out with SpawnOnCLick.
-	 0 = monsters.
-	 1 = Gap
+	 0 = monsters or if wanted to damage player 1 point of health.
+	 1 = Gap or Instant death.
 	*/
 	public void DisplayHealth (int DeathReason){
 
@@ -52,7 +52,7 @@ public class PlayerHealth : MonoBehaviour {
 				gameObject.GetComponent<PlayerController2>().Die();
 			}
 		}
-		else {
+		else if (DeathReason == 1){
 			Heart3.enabled = false;
 			Heart2.enabled = false;
 			Heart1.enabled = false;
@@ -62,6 +62,10 @@ public class PlayerHealth : MonoBehaviour {
 		}
 
 	}
+
+	/**Method to player lose health 1 point.
+	After losing health DisplayHealth is called for displaying hearts at canvas.
+	 */
 	public void LoseHealth (){
 
 		if (CurrentHealth <= 3 && CurrentHealth > 0 && InvulnerabilityTimer == 0){
@@ -73,6 +77,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	}
 
+	/**Made for if wanted to player gain health.
+	Not Used yet.
+	 */
 	public void GainHealth () {
 
 		if (CurrentHealth < 3){
@@ -82,7 +89,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	}
 
-	//DeathCanvas player spawn on click.
+	//DeathCanvas. Player spawn on click.
 	public void SpawnOnClick (){
 		gameObject.GetComponent<PauseMenu>().deathcanvas.gameObject.SetActive (false);
 		gameObject.GetComponent<PauseMenu>().isPaused = false;
