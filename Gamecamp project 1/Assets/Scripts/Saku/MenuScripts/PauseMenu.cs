@@ -33,4 +33,10 @@ public class PauseMenu : MonoBehaviour {
             isPaused = true;
         }
     }
+    public void disablepausemenu(){
+        menucanvas.gameObject.SetActive (false);
+        helpCanvas.gameObject.SetActive (false);
+        isPaused = false;
+        Time.timeScale = 1;
+    }
 }

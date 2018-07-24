@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+This script and method is used in pausemenu continue button to
+disable pausemenu and pausemenu canvas.
+ */
 public class disablepausemenu : MonoBehaviour {
 
-
-
-    public void notPausedOnClick(bool notpaused)
+    public void notPausedOnClick()
     {
-        gameObject.GetComponent<PauseMenu>().isPaused = notpaused;
-        Time.timeScale = 1;
+        GameObject.Find("Player").GetComponent<PauseMenu>().disablepausemenu();
+        Debug.Log("kakaaa!");
     }
 }

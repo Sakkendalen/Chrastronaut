@@ -1,5 +1,6 @@
 ﻿ using UnityEngine;
  
+ 
  public class SpriteText : MonoBehaviour
  {
      void Start()

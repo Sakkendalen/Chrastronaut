@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+This Class is never used.
+this was meant to be used in triggering tutorials panels and disable them
+when player does recruited actions in tutorial.
+ */
 public class TutorialScript : MonoBehaviour {
 	
 	
