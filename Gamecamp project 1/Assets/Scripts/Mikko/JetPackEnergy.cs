@@ -42,8 +42,8 @@ public class JetPackEnergy : MonoBehaviour {
         jetPackEnergyBar.rectTransform.localScale = new Vector3(currentEnergy / maxEnergy, 1, 1);
 
         if (Input.GetButton("Jump") && currentEnergy >= 1) {          //HYPPY
-            rb.AddForce(new Vector2(0, jetPackPower));
-            currentEnergy--;
+            rb.AddForce(new Vector2(0, jetPackPower) * Time.deltaTime * 55f);
+			currentEnergy = currentEnergy - (1 * (Time.deltaTime * 55f));
             pasy.enableEmission = true;
 
 
@@ -73,8 +73,8 @@ public class JetPackEnergy : MonoBehaviour {
         //}
 
 
-        if (currentEnergy < maxEnergy) {
-            currentEnergy += 0.5f;
+        if (currentEnergy < maxEnergy) {		//lisää bensaa
+            currentEnergy += 0.5f * Time.deltaTime * 55f;
         }
     }
 }

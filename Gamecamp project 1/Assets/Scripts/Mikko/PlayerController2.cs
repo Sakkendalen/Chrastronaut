@@ -92,7 +92,7 @@ public class PlayerController2 : MonoBehaviour {
                 rigidBody.AddForce(new Vector2(movementx * 10, 0));
             }
             if (movementx < 0 && rigidBody.velocity.x > -3) {   //kävelynopeuden rajoittimet
-                rigidBody.AddForce(new Vector2(movementx * 10, 0));
+				rigidBody.AddForce(new Vector2(movementx * 10, 0));
             }
         }
 
