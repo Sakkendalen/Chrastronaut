@@ -34,47 +34,48 @@ public class JetPackEnergy : MonoBehaviour {
 	void Update () {
         //customPosition.x = rb.velocity.x /10f; //asetellaan partikkeleita kohdalleen velocityn mukaan
         //customPosition.y = rb.velocity.y /10f;
-
-        if ( SoundCooldown > 0) {
-            SoundCooldown--;
-        }
-
-        jetPackEnergyBar.rectTransform.localScale = new Vector3(currentEnergy / maxEnergy, 1, 1);
-
-        if (Input.GetButton("Jump") && currentEnergy >= 1) {          //HYPPY
-            rb.AddForce(new Vector2(0, jetPackPower) * Time.deltaTime * 55f);
-			currentEnergy = currentEnergy - (1 * (Time.deltaTime * 55f));
-            pasy.enableEmission = true;
-
-
-            if (SoundCooldown == 0) {
-               Instantiate(JetPackSound, transform.position, transform.rotation);
-                SoundCooldown = Random.Range(10, 25);
+        if (gameObject.GetComponent<PauseMenu>().isPaused == false){
+            if ( SoundCooldown > 0) {
+                SoundCooldown--;
             }
 
-            //Instantiate(smoke, smokeSpawnPoint.transform.position +customPosition, transform.rotation);
-        }
-        else {
-            pasy.enableEmission = false;
+            jetPackEnergyBar.rectTransform.localScale = new Vector3(currentEnergy / maxEnergy, 1, 1);
 
-            if (SoundCooldown == 0 && Input.GetButton("Jump")) {
+            if (Input.GetButton("Jump") && currentEnergy >= 1) {          //HYPPY
+                rb.AddForce(new Vector2(0, jetPackPower) * Time.deltaTime * 55f);
+                currentEnergy = currentEnergy - (1 * (Time.deltaTime * 55f));
+                pasy.enableEmission = true;
+
+
+                if (SoundCooldown == 0) {
                 Instantiate(JetPackSound, transform.position, transform.rotation);
-                //SoundCooldown = 30; //hitaampi äänispawnaus
-                SoundCooldown = Random.Range(25, 40);
+                    SoundCooldown = Random.Range(10, 25);
+                }
+
+                //Instantiate(smoke, smokeSpawnPoint.transform.position +customPosition, transform.rotation);
+            }
+            else {
+                pasy.enableEmission = false;
+
+                if (SoundCooldown == 0 && Input.GetButton("Jump")) {
+                    Instantiate(JetPackSound, transform.position, transform.rotation);
+                    //SoundCooldown = 30; //hitaampi äänispawnaus
+                    SoundCooldown = Random.Range(25, 40);
+                }
+
             }
 
-        }
-
-        //if (Input.GetButtonDown("Jump")) {
-        //    GetComponent<AudioSource>().Play();
-        //}
-        //if (Input.GetButtonUp("Jump")) {
-        //    GetComponent<AudioSource>().Stop();
-        //}
+            //if (Input.GetButtonDown("Jump")) {
+            //    GetComponent<AudioSource>().Play();
+            //}
+            //if (Input.GetButtonUp("Jump")) {
+            //    GetComponent<AudioSource>().Stop();
+            //}
 
 
-        if (currentEnergy < maxEnergy) {		//lisää bensaa
-            currentEnergy += 0.5f * Time.deltaTime * 55f;
+            if (currentEnergy < maxEnergy) {		//lisää bensaa
+                currentEnergy += 0.5f * Time.deltaTime * 55f;
+            }
         }
     }
 }

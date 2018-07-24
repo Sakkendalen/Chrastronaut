@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour {
     public Transform deathcanvas;
 	public bool isPaused;
 
-    void Start(){
+    void Awake(){
         isPaused = false;
         Time.timeScale = 1;
     }
