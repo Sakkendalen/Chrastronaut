@@ -1011,7 +1011,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1089404123443898}
   m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4372928737804458}
@@ -1025,7 +1025,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127374351073508}
   m_LocalRotation: {x: 0, y: -0, z: -0.000000014901161, w: 1}
-  m_LocalPosition: {x: 0.018, y: -0.485, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 0.452721, y: 0.452721, z: 0.452721}
   m_Children:
   - {fileID: 4073200284140800}
@@ -1489,7 +1489,7 @@ Animator:
   m_GameObject: {fileID: 1127374351073508}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e4e2a8abd594dc04e8bb7caa28e38bae, type: 3}
-  m_Controller: {fileID: 9100000, guid: 46cc73ee50025e74e935833b0bcb7d44, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2aaa4d463bbb4a24b8e57dd29f97147e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jetPackEnergyBar: {fileID: 0}
-  maxEnergy: 30
+  maxEnergy: 40
   jetPackPower: 11
   JetPackSound: {fileID: 1597158382141792, guid: ecaf4b15e20a23842833fbb3a84001f7,
     type: 2}
@@ -1545,6 +1545,7 @@ MonoBehaviour:
   OuchSound: {fileID: 1022299496592626, guid: fca5b9f277909e94d811b69c739fbfef, type: 2}
   TouchGroundSound: {fileID: 0}
   isDead: 0
+  disableMovement: 0
 --- !u!114 &114562007824289628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1574,7 +1575,6 @@ MonoBehaviour:
   menucanvas: {fileID: 0}
   helpCanvas: {fileID: 0}
   deathcanvas: {fileID: 0}
-  isPaused: 0
 --- !u!120 &120402044840251968
 LineRenderer:
   m_ObjectHideFlags: 1
