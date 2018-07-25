@@ -34,7 +34,7 @@ public class JetPackEnergy : MonoBehaviour {
 	void Update () {
         //customPosition.x = rb.velocity.x /10f; //asetellaan partikkeleita kohdalleen velocityn mukaan
         //customPosition.y = rb.velocity.y /10f;
-        if (gameObject.GetComponent<PauseMenu>().isPaused == false){
+        if (gameObject.GetComponent<PlayerController2>().disableMovement == false){
             if ( SoundCooldown > 0) {
                 SoundCooldown--;
             }

@@ -92,7 +92,7 @@ public class PlayerHealth : MonoBehaviour {
 	//DeathCanvas. Player spawn on click.
 	public void SpawnOnClick (){
 		gameObject.GetComponent<PauseMenu>().deathcanvas.gameObject.SetActive (false);
-		gameObject.GetComponent<PauseMenu>().isPaused = false;
+		gameObject.GetComponent<PlayerController2>().disablePlayerMovement(false);
 		gameObject.GetComponent<PlayerController2>().isDead = false;
 		gameObject.GetComponent<PlayerController2>().Die();
 		Time.timeScale = 1;

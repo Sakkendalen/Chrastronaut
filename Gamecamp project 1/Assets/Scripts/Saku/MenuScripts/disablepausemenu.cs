@@ -10,6 +10,5 @@ public class disablepausemenu : MonoBehaviour {
     public void notPausedOnClick()
     {
         GameObject.Find("Player").GetComponent<PauseMenu>().disablepausemenu();
-        Debug.Log("kakaaa!");
     }
 }

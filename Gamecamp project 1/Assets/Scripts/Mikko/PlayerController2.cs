@@ -25,8 +25,10 @@ public class PlayerController2 : MonoBehaviour {
     public GameObject TouchGroundSound;
     int TouchGroundSoundDelay;
     public bool isDead = false;
+    public bool disableMovement;
 	// Use this for initialization
 	void Start () {
+        disableMovement = false;
         rigidBody = GetComponent<Rigidbody2D>();
         graplingHook = GetComponent<DistanceJoint2D>();
         animator = GetComponentInChildren<Animator>();
@@ -41,8 +43,9 @@ public class PlayerController2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Nopee hätäne pause menuun.
-        if (gameObject.GetComponent<PauseMenu>().isPaused == false){
+        //to check if game is paused and player needs to be disabled
+        //also when levelchanger fading is started player movement had to be disabled
+        if (disableMovement == false){
             checkGround();
             movementForces();
             hookControls();
@@ -311,5 +314,15 @@ public class PlayerController2 : MonoBehaviour {
 
         //gameCamera.GetComponent<CameraFollow2>().playerAliveMovement = false; //pelaaja on kuollut ja asetetaan kameran liikkumismoodi sellaiseksi
         //rigidBody.angularVelocity = Vector3.zero;
+    }
+
+    /**
+    This method will determite is player allowed to move by simply changing bool disableMovement
+    which we will check in update method that it is false. This method will elimite one boolean out of
+    our code and it will improve little that we do not change public variable in every other scripts and
+    reduces confusion of when it will be changed and checked.
+     */
+    public void disablePlayerMovement(bool disable){
+        disableMovement = disable;
     }
 }
