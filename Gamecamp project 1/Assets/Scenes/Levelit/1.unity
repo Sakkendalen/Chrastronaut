@@ -1954,8 +1954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: 2.8
   Speed: 0.8
+  MovementRadiusX: 0
 --- !u!61 &257865754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3323,8 +3324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: -1.3
   Speed: 0.9
+  MovementRadiusX: 0
 --- !u!61 &549603171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3593,6 +3595,7 @@ MonoBehaviour:
   RotateX: 0
   RotateY: 1
   RotateZ: 0
+  Speed: 0
 --- !u!1001 &587284312
 Prefab:
   m_ObjectHideFlags: 0
@@ -5681,8 +5684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1.36
+  MovementRadiusY: 0.36
   Speed: 0.54
+  MovementRadiusX: 0
 --- !u!61 &953853416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6223,6 +6227,7 @@ MonoBehaviour:
   RotateX: 0.1
   RotateY: 0.05
   RotateZ: 0.025
+  Speed: 1
 --- !u!1 &1025925366
 GameObject:
   m_ObjectHideFlags: 0
@@ -6468,8 +6473,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: 2
   Speed: 0.6
+  MovementRadiusX: 0
 --- !u!61 &1080733651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6753,8 +6759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: 1
   Speed: 1
+  MovementRadiusX: 0
 --- !u!4 &1104663466 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374,
@@ -6851,11 +6858,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 357.57
+      value: 357.6
       objectReference: {fileID: 0}
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7199,6 +7206,7 @@ MonoBehaviour:
   RotateX: 0.15
   RotateY: 0.1
   RotateZ: 0.075
+  Speed: 1
 --- !u!1001 &1178354902
 Prefab:
   m_ObjectHideFlags: 0
@@ -7420,8 +7428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
-  Speed: 0.6
+  MovementRadiusY: 2.17
+  Speed: 0.24
+  MovementRadiusX: 0
 --- !u!61 &1197060513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7710,6 +7719,7 @@ MonoBehaviour:
   RotateX: 0
   RotateY: 0
   RotateZ: 0.1
+  Speed: 1
 --- !u!61 &1231170302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7901,6 +7911,7 @@ MonoBehaviour:
   RotateX: 0
   RotateY: 0
   RotateZ: 0.1
+  Speed: 1
 --- !u!61 &1233692033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9449,8 +9460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: -1.39
   Speed: 0.6
+  MovementRadiusX: 0
 --- !u!61 &1551953640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11556,6 +11568,7 @@ MonoBehaviour:
   RotateX: 0
   RotateY: 0.1
   RotateZ: 0
+  Speed: 1
 --- !u!1001 &1916173381
 Prefab:
   m_ObjectHideFlags: 0
@@ -11595,6 +11608,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 212344156}
+    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: fist
+      value: 
+      objectReference: {fileID: 1088581109}
+    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: jetPackEnergyBar
+      value: 
+      objectReference: {fileID: 1793431411}
     - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: menucanvas
@@ -11610,21 +11638,6 @@ Prefab:
       propertyPath: deathcanvas
       value: 
       objectReference: {fileID: 2145005773}
-    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: jetPackEnergyBar
-      value: 
-      objectReference: {fileID: 1793431411}
-    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: gameCamera
-      value: 
-      objectReference: {fileID: 212344156}
-    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: fist
-      value: 
-      objectReference: {fileID: 1088581109}
     - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: Heart1
@@ -11640,23 +11653,6 @@ Prefab:
       propertyPath: Heart3
       value: 
       objectReference: {fileID: 2024011857}
-    - target: {fileID: 1089404123443898, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4372928737804458, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4372928737804458, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 120402044840251968, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
@@ -13170,8 +13166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadius: 1
+  MovementRadiusY: 0.6
   Speed: 0.5
+  MovementRadiusX: 0
 --- !u!61 &2140887762
 BoxCollider2D:
   m_ObjectHideFlags: 0
