@@ -9365,7 +9365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4459167814366918, guid: bc5d5f15a66602e4baf7d39c83bfff68, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -22.750378
+      value: -28.3
       objectReference: {fileID: 0}
     - target: {fileID: 4459167814366918, guid: bc5d5f15a66602e4baf7d39c83bfff68, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10053,11 +10053,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.0304
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 4768748562031724, guid: 9d54a20d93de3c94f9d3125106d3d374, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11578,11 +11578,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 226.35
       objectReference: {fileID: 0}
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13108,6 +13108,7 @@ MonoBehaviour:
   FaultyRuins2: {fileID: 181405593}
   Bridge1: {fileID: 811682154}
   Bridge2: {fileID: 44361924}
+  tutorialText: {fileID: 41221844}
 --- !u!1001 &2135770342
 Prefab:
   m_ObjectHideFlags: 0

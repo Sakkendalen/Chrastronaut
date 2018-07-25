@@ -19,6 +19,8 @@ public class PillarsPuzzle : MonoBehaviour {
     public GameObject Bridge1;
     public GameObject Bridge2;
 
+	public GameObject tutorialText;
+
     bool Switch1b;
     bool Switch2b;
     bool Switch3b;
@@ -111,6 +113,7 @@ public class PillarsPuzzle : MonoBehaviour {
             Bridge2.SetActive(true);
             FaultyRuins1.SetActive(false);
             FaultyRuins2.SetActive(false);
+			tutorialText.GetComponent<TextMesh>().text = "Hooray";
         }
         else {
             Bridge1.SetActive(false);
