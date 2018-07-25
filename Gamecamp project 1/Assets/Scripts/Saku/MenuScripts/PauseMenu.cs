@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour {
     public Transform menucanvas;
     public Transform helpCanvas;
     public Transform deathcanvas;
+
 	//public bool isPaused;
 
     void Awake(){

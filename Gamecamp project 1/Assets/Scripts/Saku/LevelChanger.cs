@@ -25,6 +25,7 @@ public class LevelChanger : MonoBehaviour {
 
 	void Trigger (){
 		if (playerInbound == true){
+			GameObject.Find("Player").GetComponent<PlayerController2>().disablePlayerMovement(true);
 			FadeToNextLevel();
 		}
 	}
