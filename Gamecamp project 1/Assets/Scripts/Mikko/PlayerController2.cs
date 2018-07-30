@@ -23,6 +23,9 @@ public class PlayerController2 : MonoBehaviour {
     public GameObject GunSound;
     public GameObject OuchSound;
     public GameObject TouchGroundSound;
+	public GameObject FootStepsSound;
+	float footStepDelay;
+
     int TouchGroundSoundDelay;
     public bool isDead = false;
     public bool disableMovement;
@@ -39,6 +42,8 @@ public class PlayerController2 : MonoBehaviour {
         idle = false;
         startposition = transform.position;
         TouchGroundSoundDelay = 0;
+		footStepDelay = 0;
+
     }
 	
 	// Update is called once per frame
@@ -58,6 +63,13 @@ public class PlayerController2 : MonoBehaviour {
             if ( TouchGroundSoundDelay > 0) {
                 TouchGroundSoundDelay--;
             }
+			if (!idle && isTouchingGround && footStepDelay < 1) { //walk sound play
+				Instantiate (FootStepsSound, transform.position, transform.rotation);
+				footStepDelay = Random.Range (28f, 34f);
+			} 
+			if (footStepDelay > 0) {
+				footStepDelay = footStepDelay - Mathf.Abs(rigidBody.velocity.x/5f ) -1f;
+			}
 
             //paskafixi maan kaltevuuteen alkaa
             GetComponent<CircleCollider2D>().enabled = false;

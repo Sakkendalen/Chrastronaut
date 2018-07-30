@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class AudioScript : MonoBehaviour {
 
+	public bool Randomize;
+
 	// Use this for initialization
 	void Start () {
+		if (Randomize) {
+			GetComponent<AudioSource> ().pitch = Random.Range (0.5f , 1.5f);
+		}
     }
 	
 	// Update is called once per frame
