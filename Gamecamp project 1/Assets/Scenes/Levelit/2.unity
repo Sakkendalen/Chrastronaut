@@ -19056,6 +19056,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SpawnOnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 114155702729579722, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: m_Text
+      value: Help & Audio
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
   m_IsPrefabParent: 0
@@ -19067,6 +19072,16 @@ RectTransform:
 --- !u!224 &870518516 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224678451788748230, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 870518514}
+--- !u!224 &870518517 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224452107061152236, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 870518514}
+--- !u!224 &870518518 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224693294092504866, guid: 2e0ac3384fffc3541ab919166a516c91,
     type: 2}
   m_PrefabInternal: {fileID: 870518514}
 --- !u!1001 &874972236
@@ -54125,6 +54140,16 @@ Prefab:
       propertyPath: m_ConnectedAnchor.y
       value: 4.4999423
       objectReference: {fileID: 0}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: helpGroup
+      value: 
+      objectReference: {fileID: 870518518}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: audiocanvas
+      value: 
+      objectReference: {fileID: 870518517}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0

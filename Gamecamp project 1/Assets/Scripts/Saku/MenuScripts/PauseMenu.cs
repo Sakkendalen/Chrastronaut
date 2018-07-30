@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour {
     public Transform menucanvas;
     public Transform helpCanvas;
     public Transform deathcanvas;
+    public Transform audiocanvas;
+    public Transform helpGroup;
 
 	//public bool isPaused;
 
@@ -18,7 +20,8 @@ public class PauseMenu : MonoBehaviour {
     public void Update () {
 
         if (Input.GetKeyDown (KeyCode.Escape)) {
-            if (menucanvas.gameObject.activeInHierarchy == false && helpCanvas.gameObject.activeInHierarchy == false) {  
+            if (menucanvas.gameObject.activeInHierarchy == false && helpCanvas.gameObject.activeInHierarchy == false
+            && audiocanvas.gameObject.activeInHierarchy == false && helpGroup.gameObject.activeInHierarchy == false) {  
                 menucanvas.gameObject.SetActive (true);
                 //isPaused = true;
                 Time.timeScale = 0;
@@ -26,6 +29,8 @@ public class PauseMenu : MonoBehaviour {
 
             } else {
                 menucanvas.gameObject.SetActive (false);
+                audiocanvas.gameObject.SetActive (false);
+                helpGroup.gameObject.SetActive (false);
                 helpCanvas.gameObject.SetActive (false);
                 //isPaused = false;
                 Time.timeScale = 1;

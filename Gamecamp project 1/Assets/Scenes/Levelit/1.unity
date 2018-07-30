@@ -213,6 +213,11 @@ PolygonCollider2D:
       - {x: -0.038636666, y: 0.008217974}
       - {x: -0.0059210965, y: 0.0013701534}
       - {x: 0.030458298, y: -0.021805571}
+--- !u!224 &15393828 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224693294092504866, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580662730}
 --- !u!4 &40760465 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0bf1335dd3a328749a486897d7868bdd, type: 3}
@@ -3927,6 +3932,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed538105b6a57424ea21c9e803849f5e, type: 3}
   m_IsPrefabParent: 0
+--- !u!224 &533208148 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224452107061152236, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580662730}
 --- !u!1 &538108556
 GameObject:
   m_ObjectHideFlags: 0
@@ -11958,21 +11968,21 @@ Prefab:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1856039950}
-    - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
-        type: 2}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 1856039950}
-    - target: {fileID: 114212343260425160, guid: 2e0ac3384fffc3541ab919166a516c91,
-        type: 2}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 1856039950}
     - target: {fileID: 114425079751595832, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1447138811}
+    - target: {fileID: 114212343260425160, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1856039950}
+    - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1856039950}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e0ac3384fffc3541ab919166a516c91, type: 2}
   m_IsPrefabParent: 0
@@ -14097,11 +14107,16 @@ Prefab:
       propertyPath: deathcanvas
       value: 
       objectReference: {fileID: 2145005773}
-    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
-      propertyPath: jetPackEnergyBar
+      propertyPath: audiocanvas
       value: 
-      objectReference: {fileID: 1793431411}
+      objectReference: {fileID: 533208148}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: helpGroup
+      value: 
+      objectReference: {fileID: 15393828}
     - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: gameCamera
@@ -14112,6 +14127,11 @@ Prefab:
       propertyPath: fist
       value: 
       objectReference: {fileID: 1088581109}
+    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: jetPackEnergyBar
+      value: 
+      objectReference: {fileID: 1793431411}
     - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: Heart1
