@@ -33,6 +33,7 @@ public class Fist2 : MonoBehaviour {
 
         if (state == 2) {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, 0.5f);
+            transform.LookAt(targetPosition);
         }
         if (state == 3) {  //Return
             transform.position = Vector2.MoveTowards(transform.position, playerGameobject.transform.position, 0.5f);

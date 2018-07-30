@@ -730,6 +730,49 @@ Prefab:
       propertyPath: playerGameobject
       value: 
       objectReference: {fileID: 1447138809}
+    - target: {fileID: 4131732098587344, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23106038533752364, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.9256858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.37829307
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.00013196877
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.00032292854
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429486418392290, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 23280867176148442, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138134654784766, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9,
+        type: 2}
+      propertyPath: targetToLookAt
+      value: 
+      objectReference: {fileID: 1447138809}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
   m_IsPrefabParent: 0

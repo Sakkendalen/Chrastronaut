@@ -775,6 +775,11 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114138134654784766, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9,
+        type: 2}
+      propertyPath: targetToLookAt
+      value: 
+      objectReference: {fileID: 1447138809}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
   m_IsPrefabParent: 0

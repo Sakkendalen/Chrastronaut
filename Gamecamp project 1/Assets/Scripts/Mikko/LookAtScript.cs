@@ -13,6 +13,6 @@ public class LookAtScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.LookAt(targetToLookAt.transform.position);
+        transform.LookAt(targetToLookAt.transform.position);
 	}
 }
