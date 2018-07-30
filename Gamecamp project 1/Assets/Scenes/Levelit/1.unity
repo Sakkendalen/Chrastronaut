@@ -11963,11 +11963,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114446883067813744, guid: 2e0ac3384fffc3541ab919166a516c91,
-        type: 2}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 1856039950}
     - target: {fileID: 114425079751595832, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -11979,6 +11974,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1856039950}
     - target: {fileID: 114166875389962196, guid: 2e0ac3384fffc3541ab919166a516c91,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1856039950}
+    - target: {fileID: 114446883067813744, guid: 2e0ac3384fffc3541ab919166a516c91,
         type: 2}
       propertyPath: eventSystem
       value: 
