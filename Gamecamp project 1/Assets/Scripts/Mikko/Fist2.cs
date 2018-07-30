@@ -11,10 +11,13 @@ public class Fist2 : MonoBehaviour {
 	public GameObject PlatformSound;
 	public GameObject KelausSound;
 
+	bool platformSoundReady;
+
 
     // Use this for initialization
     void Start () {
         state = 1;
+		platformSoundReady = true;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +37,7 @@ public class Fist2 : MonoBehaviour {
         if (state == 3) {  //Return
             transform.position = Vector2.MoveTowards(transform.position, playerGameobject.transform.position, 0.5f);
             GetComponent<CircleCollider2D>().enabled = false;
+			platformSoundReady = true;
         }
         if (state == 4) {
 
@@ -84,7 +88,10 @@ public class Fist2 : MonoBehaviour {
         if (collision.gameObject.tag == "Platform") {
             Debug.Log("TRIGGER2D!!!");
 			//playsound
-			Instantiate(PlatformSound, transform.position, transform.rotation);
+			if (platformSoundReady) {
+				Instantiate (PlatformSound, transform.position, transform.rotation);
+				platformSoundReady = false;
+			}
             state = 4;
             playerGameobject.GetComponent<PlayerController2>().hookHasJustBegun();
             transform.parent = collision.gameObject.transform; //parentoidaan collisioniin jos collisionilla on movementtia
