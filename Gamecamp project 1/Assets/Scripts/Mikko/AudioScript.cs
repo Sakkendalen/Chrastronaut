@@ -8,6 +8,9 @@ public class AudioScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		GetComponent<AudioSource>().volume = GetComponent<AudioSource>().volume * PlayerPrefs.GetFloat("SFXvolume");
+
 		if (Randomize) {
 			GetComponent<AudioSource> ().pitch = Random.Range (0.5f , 1.5f);
 		}
