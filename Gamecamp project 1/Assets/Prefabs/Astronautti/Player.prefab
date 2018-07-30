@@ -1545,6 +1545,8 @@ MonoBehaviour:
   OuchSound: {fileID: 1022299496592626, guid: fca5b9f277909e94d811b69c739fbfef, type: 2}
   TouchGroundSound: {fileID: 1995004195345574, guid: 5eb517e56adcafe46a6736cb0d6c79fc,
     type: 2}
+  FootStepsSound: {fileID: 1995004195345574, guid: 15554b3a409b1e74aadb6ee62e6ca34d,
+    type: 2}
   isDead: 0
   disableMovement: 0
 --- !u!114 &114562007824289628

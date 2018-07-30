@@ -678,18 +678,6 @@ Prefab:
       propertyPath: playerGameobject
       value: 
       objectReference: {fileID: 1447138809}
-    - target: {fileID: 1179495155297822, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709990568865850, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1058956653089522, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8f4c1c910ed2a34ba927b7c8a3e3fb9, type: 2}
   m_IsPrefabParent: 0
@@ -14017,11 +14005,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.88
       objectReference: {fileID: 0}
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 4372876843443038, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14047,21 +14035,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: gameCamera
-      value: 
-      objectReference: {fileID: 212344156}
-    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: fist
-      value: 
-      objectReference: {fileID: 1088581109}
-    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
-        type: 2}
-      propertyPath: jetPackEnergyBar
-      value: 
-      objectReference: {fileID: 1793431411}
     - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: menucanvas
@@ -14077,6 +14050,21 @@ Prefab:
       propertyPath: deathcanvas
       value: 
       objectReference: {fileID: 2145005773}
+    - target: {fileID: 114085149499987586, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: jetPackEnergyBar
+      value: 
+      objectReference: {fileID: 1793431411}
+    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 212344156}
+    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: fist
+      value: 
+      objectReference: {fileID: 1088581109}
     - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
         type: 2}
       propertyPath: Heart1

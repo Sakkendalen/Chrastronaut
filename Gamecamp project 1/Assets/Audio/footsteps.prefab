@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 82935443464223100}
   - component: {fileID: 114653181203399366}
   m_Layer: 0
-  m_Name: takaisinkelaus
+  m_Name: footsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,9 +50,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 14e640f5f5f56c84abdb34d45ca7a582, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9ae0fd6e36cbc5419f67569c022846b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.08
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce6212f157d27c4a8e2f63cb18ccdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Randomize: 1
