@@ -252,7 +252,7 @@ public class PlayerController2 : MonoBehaviour {
         if (Physics2D.Raycast(transform.position + new Vector3 (0, -rayDistance, 0) , Vector2.down, 0.1f ) ) {
 
             if (isTouchingGround == false && TouchGroundSoundDelay == 0) {    //play touchGroundSound
-                Instantiate(GunSound, transform.position, transform.rotation);
+				Instantiate(TouchGroundSound, transform.position, transform.rotation);
                 Debug.Log("groundsound played");
             }
 

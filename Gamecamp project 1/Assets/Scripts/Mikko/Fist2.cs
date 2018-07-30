@@ -8,6 +8,8 @@ public class Fist2 : MonoBehaviour {
     public Vector2 targetPosition;
     public GameObject playerGameobject;
     RaycastHit2D seePlayerCheck;
+	public GameObject PlatformSound;
+	public GameObject KelausSound;
 
 
     // Use this for initialization
@@ -44,6 +46,7 @@ public class Fist2 : MonoBehaviour {
         {
             //Debug.Log("RETURN");
             state = 3;
+			Instantiate(KelausSound, transform.position, transform.rotation);
         }
         if (transform.position.x == playerGameobject.transform.position.x && transform.position.y == playerGameobject.transform.position.y )
         {
@@ -72,6 +75,7 @@ public class Fist2 : MonoBehaviour {
         if (state == 3)
         {
             transform.parent = null;
+			Instantiate(KelausSound, transform.position, transform.rotation);
         }
     }
 
@@ -79,6 +83,8 @@ public class Fist2 : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Platform") {
             Debug.Log("TRIGGER2D!!!");
+			//playsound
+			Instantiate(PlatformSound, transform.position, transform.rotation);
             state = 4;
             playerGameobject.GetComponent<PlayerController2>().hookHasJustBegun();
             transform.parent = collision.gameObject.transform; //parentoidaan collisioniin jos collisionilla on movementtia

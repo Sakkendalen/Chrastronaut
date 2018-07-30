@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1179495155297822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 2.2547421, y: 0.4723742, z: 0.34128284}
   m_LocalScale: {x: 0.32907045, y: 0.32907048, z: 0.32907048}
   m_Children:
   - {fileID: 4700852330277694}
@@ -250,6 +250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0}
   playerGameobject: {fileID: 0}
+  PlatformSound: {fileID: 1995004195345574, guid: a8859cc28a17b6f488dd15ece05c1e80,
+    type: 2}
+  KelausSound: {fileID: 1995004195345574, guid: cde5dfff3fb49aa4cbf3b521be546e79,
+    type: 2}
 --- !u!114 &114874883072118072
 MonoBehaviour:
   m_ObjectHideFlags: 1
