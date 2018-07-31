@@ -21,7 +21,7 @@ public class Zoomer : MonoBehaviour {
 	void Update () {
         if (isMeActive == true) {
             kamera.GetComponent<CameraFollow2>().SetZoomout(ZoomOutX, ZoomOutY, ZoomOutZ);
-            Debug.Log("Zoomout Update");
+            //Debug.Log("Zoomout Update");
         }
 
         if (Timer == 0) {
@@ -35,7 +35,7 @@ public class Zoomer : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             isMeActive = true;
-            Debug.Log("OnTriggerEnter?????");
+            //Debug.Log("OnTriggerEnter?????");
             Timer = 40;
         }
     }
@@ -50,7 +50,7 @@ public class Zoomer : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             isMeActive = true;
-            Debug.Log("STAY ja timerissa oli : " + Timer);
+            //Debug.Log("STAY ja timerissa oli : " + Timer);
             Timer = 40;
         }
     }

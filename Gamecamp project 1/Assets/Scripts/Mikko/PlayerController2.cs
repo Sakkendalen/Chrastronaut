@@ -168,7 +168,7 @@ public class PlayerController2 : MonoBehaviour {
             //hit = Physics2D.Raycast(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2), 7f);//vaihtoehtoinen hiiriohjaus
             if (Input.GetButtonDown("Fire1")) {
                 hit = Physics2D.Raycast(transform.position, mousePosition - transform.position, 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
-                Debug.Log("HiiriFire");
+                //Debug.Log("HiiriFire");
             }
             if (Input.GetButtonDown("Fire1J")) {
                 hit = Physics2D.Raycast(transform.position, new Vector3(movementx , movementy, 0f), 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia

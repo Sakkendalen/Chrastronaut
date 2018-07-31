@@ -53,6 +53,6 @@ public class CameraFollow2 : MonoBehaviour {
 
     public void SetZoomout(float x, float y, float z) {
         gamePlayZoomouts = new Vector3(x, y, z);
-        Debug.Log(gamePlayZoomouts);
+        //Debug.Log(gamePlayZoomouts);
     }
 }

@@ -14,7 +14,7 @@ public class VolumeControl : MonoBehaviour {
 	}
 
 	void Update (){
-		Debug.Log("moimoi");
+		//Debug.Log("moimoi");
 		PlayerPrefs.SetFloat("SFXvolume", SFXvolume.value);
 		PlayerPrefs.SetFloat("Musicvolume", Musicvolume.value);
 		PlayerPrefs.Save();

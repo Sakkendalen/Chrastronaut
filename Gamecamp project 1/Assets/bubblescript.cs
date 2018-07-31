@@ -18,7 +18,7 @@ public class bubblescript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if ( transform.position.y > 10f) {
             //transform.position = new Vector3(startpos.x, -6f , startpos.z);
             //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -38,13 +38,14 @@ public class bubblescript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log("Kuplatörmäys2");
-        if (collision.tag != "Zoomer") {
+        if (collision.tag == "Fist") {
             GetComponent<Rigidbody2D>().gravityScale = 0.1f;
         }
 
         if (collision.name == "Fist") {
-            //Debug.Log("HIT BY FIST");
+            Debug.Log("HIT BY FIST & SET TO TRUE");
             isFistConnected = true;
+            GetComponent<Rigidbody2D>().gravityScale = 0.1f;
         }
 
 
@@ -52,12 +53,14 @@ public class bubblescript : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision) {
         Debug.Log("Kuplatörmäys3");
-        if (collision.tag != "Zoomer") {
+        if (collision.tag == "Fist") {
             GetComponent<Rigidbody2D>().gravityScale = -0.1f;
         }
         if (collision.name == "Fist") {
             //Debug.Log("FIST RELEASE");
             isFistConnected = false;
+            GetComponent<Rigidbody2D>().gravityScale = -0.1f;
+            
         }
     }
 }

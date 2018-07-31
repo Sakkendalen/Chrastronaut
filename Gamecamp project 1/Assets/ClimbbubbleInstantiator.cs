@@ -10,7 +10,7 @@ public class ClimbbubbleInstantiator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        countdown = Random.Range(400, 1000);
+        countdown = Random.Range(100, 300);
         xmod = 0f;
 	}
 	

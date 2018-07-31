@@ -34,8 +34,8 @@ public class JetPackEnergy : MonoBehaviour {
 	void Update () {
         //customPosition.x = rb.velocity.x /10f; //asetellaan partikkeleita kohdalleen velocityn mukaan
         //customPosition.y = rb.velocity.y /10f;
-        Debug.Log("sfx Volume" + PlayerPrefs.GetFloat("SFXvolume"));
-		Debug.Log(PlayerPrefs.GetFloat("Musicvolume"));
+        //Debug.Log("sfx Volume" + PlayerPrefs.GetFloat("SFXvolume"));
+		//Debug.Log(PlayerPrefs.GetFloat("Musicvolume"));
         if (gameObject.GetComponent<PlayerController2>().disableMovement == false){
             if ( SoundCooldown > 0) {
                 SoundCooldown--;
