@@ -20,6 +20,8 @@ public class PillarsPuzzle : MonoBehaviour {
     public GameObject Bridge2;
 
 	public GameObject tutorialText;
+    public GameObject VisualEffect;
+    public GameObject VisualEffect2;
 
     bool Switch1b;
     bool Switch2b;
@@ -114,6 +116,8 @@ public class PillarsPuzzle : MonoBehaviour {
             FaultyRuins1.SetActive(false);
             FaultyRuins2.SetActive(false);
 			tutorialText.GetComponent<TextMesh>().text = "Hooray";
+            VisualEffect.SetActive(true);
+            VisualEffect2.SetActive(true);
         }
         else {
             Bridge1.SetActive(false);
