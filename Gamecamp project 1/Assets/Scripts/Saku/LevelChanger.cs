@@ -53,6 +53,7 @@ public class LevelChanger : MonoBehaviour {
 
 		if(levelIndex == 3){
 			LevelToLoad = levelIndex;
+			animator.SetTrigger("FadeOut");
 		}
 		else {
 			//WinLevel();
