@@ -124,6 +124,8 @@ public class PillarsPuzzle : MonoBehaviour {
             Bridge2.SetActive(false);
             FaultyRuins1.SetActive(true);
             FaultyRuins2.SetActive(true);
+            VisualEffect.SetActive(false);
+            VisualEffect2.SetActive(false);
         }
     }
 
