@@ -51,7 +51,9 @@ public class Fist2 : MonoBehaviour {
         {
             //Debug.Log("RETURN");
             state = 3;
-			Instantiate(KelausSound, transform.position, transform.rotation);
+            if(playerGameobject.GetComponent<PlayerController2>().isDead == false){
+			    Instantiate(KelausSound, transform.position, transform.rotation);
+            }
         }
         if (transform.position.x == playerGameobject.transform.position.x && transform.position.y == playerGameobject.transform.position.y )
         {
@@ -80,7 +82,9 @@ public class Fist2 : MonoBehaviour {
         if (state == 3)
         {
             transform.parent = null;
-			Instantiate(KelausSound, transform.position, transform.rotation);
+            if(playerGameobject.GetComponent<PlayerController2>().isDead == false){
+			    Instantiate(KelausSound, transform.position, transform.rotation);
+            }
         }
     }
 
@@ -90,8 +94,10 @@ public class Fist2 : MonoBehaviour {
             Debug.Log("TRIGGER2D!!!");
 			//playsound
 			if (platformSoundReady) {
-				Instantiate (PlatformSound, transform.position, transform.rotation);
-				platformSoundReady = false;
+                if(playerGameobject.GetComponent<PlayerController2>().isDead == false){
+				    Instantiate (PlatformSound, transform.position, transform.rotation);
+				    platformSoundReady = false;
+                }
 			}
             state = 4;
             playerGameobject.GetComponent<PlayerController2>().hookHasJustBegun();
