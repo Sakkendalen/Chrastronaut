@@ -5,4 +5,5 @@ using UnityEngine;
 public class VolumeOma : MonoBehaviour {
 
 	public static float SFXVoimakkuus;
+
 }
