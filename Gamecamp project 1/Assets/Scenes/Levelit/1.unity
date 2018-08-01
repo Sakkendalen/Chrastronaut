@@ -2009,6 +2009,7 @@ MonoBehaviour:
   offset: {x: 0, y: 2, z: -8}
   playerAliveMovement: 0
   lookPlayer: 0
+  deathZoom: 0
 --- !u!1 &214215963
 GameObject:
   m_ObjectHideFlags: 0
@@ -15824,6 +15825,11 @@ Prefab:
       propertyPath: Heart3
       value: 
       objectReference: {fileID: 2024011857}
+    - target: {fileID: 114562007824289628, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 212344153}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
