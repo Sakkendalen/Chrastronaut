@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour {
     private float CurrentHealth;
     Rigidbody2D rb;
     int InvulnerabilityTimer;
+	public GameObject camera;
 
 
 
@@ -96,5 +97,6 @@ public class PlayerHealth : MonoBehaviour {
 		gameObject.GetComponent<PlayerController2>().isDead = false;
 		gameObject.GetComponent<PlayerController2>().Die();
 		Time.timeScale = 1;
+		camera.GetComponent<CameraFollow2> ().deathZoom = 200f;
 	}
 }
