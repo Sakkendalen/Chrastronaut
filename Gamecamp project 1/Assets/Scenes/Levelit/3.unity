@@ -19999,6 +19999,16 @@ Prefab:
       propertyPath: deathcanvas
       value: 
       objectReference: {fileID: 2145005773}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: audiocanvas
+      value: 
+      objectReference: {fileID: 1998978416}
+    - target: {fileID: 114653109987667258, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: helpGroup
+      value: 
+      objectReference: {fileID: 1998978415}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
@@ -21258,6 +21268,16 @@ RectTransform:
 --- !u!224 &1998978414 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224678451788748230, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1998978412}
+--- !u!224 &1998978415 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224693294092504866, guid: 2e0ac3384fffc3541ab919166a516c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1998978412}
+--- !u!224 &1998978416 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224452107061152236, guid: 2e0ac3384fffc3541ab919166a516c91,
     type: 2}
   m_PrefabInternal: {fileID: 1998978412}
 --- !u!1001 &1998988725

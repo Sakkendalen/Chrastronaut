@@ -22,10 +22,4 @@ public class UfoTrigger : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 		}
 	}
-
-	/**void Trigger (){
-		float step = speed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-	}
-	*/
 }
