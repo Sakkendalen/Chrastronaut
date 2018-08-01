@@ -24,6 +24,7 @@ public class PlayerController2 : MonoBehaviour {
     public GameObject OuchSound;
     public GameObject TouchGroundSound;
 	public GameObject FootStepsSound;
+	public GameObject enemyDeathSound;
 	float footStepDelay;
 
     int TouchGroundSoundDelay;
@@ -290,6 +291,7 @@ public class PlayerController2 : MonoBehaviour {
             if (transform.position.y > collision.gameObject.transform.position.y + 0.5f) {
                 rigidBody.AddForce(Vector2.up * 500);
                 Debug.Log("tapoin vihollisen");
+				Instantiate(enemyDeathSound, transform.position, transform.rotation);
                 Destroy(collision.gameObject);
             }
             else {

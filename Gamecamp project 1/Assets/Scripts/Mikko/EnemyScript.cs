@@ -25,12 +25,12 @@ public class EnemyScript : MonoBehaviour {
 		transform.localScale = transform.localScale +  new Vector3(scaler.x/250, scaler.x / 250 , scaler.x / 250);
 
         if (goingLeft == true) {
-            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
+            //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
             transform.Translate(new Vector2(speed/1000f, 0) );
             position--;
         }
         if (goingLeft == false) {
-            transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, -90, 0);
+            //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, -90, 0);
             transform.Translate(new Vector2(-speed / 1000f, 0));
             position++;
         }
