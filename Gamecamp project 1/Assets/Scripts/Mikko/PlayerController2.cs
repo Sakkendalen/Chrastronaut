@@ -64,7 +64,9 @@ public class PlayerController2 : MonoBehaviour {
                 TouchGroundSoundDelay--;
             }
 			if (!idle && isTouchingGround && footStepDelay < 1) { //walk sound play
-				Instantiate (FootStepsSound, transform.position, transform.rotation);
+                if(isDead == false){
+				    Instantiate (FootStepsSound, transform.position, transform.rotation);
+                }
 				footStepDelay = Random.Range (28f, 34f);
 			} 
 			if (footStepDelay > 0) {
@@ -175,7 +177,9 @@ public class PlayerController2 : MonoBehaviour {
                 Debug.Log("JoiskaFire");
             }
 
-            Instantiate(GunSound, transform.position, transform.rotation); //gun sound
+            if(isDead == false){
+                Instantiate(GunSound, transform.position, transform.rotation); //gun sound
+            }
 
 
             GetComponent<CircleCollider2D>().enabled = true;                                        //RAYCASTI KOHTEESEEN
@@ -264,8 +268,10 @@ public class PlayerController2 : MonoBehaviour {
         if (Physics2D.Raycast(transform.position + new Vector3 (0, -rayDistance, 0) , Vector2.down, 0.1f ) ) {
 
             if (isTouchingGround == false && TouchGroundSoundDelay == 0) {    //play touchGroundSound
-				Instantiate(TouchGroundSound, transform.position, transform.rotation);
-                Debug.Log("groundsound played");
+                if(isDead == false){
+                    Instantiate(TouchGroundSound, transform.position, transform.rotation);
+                    Debug.Log("groundsound played");
+                }
             }
 
             isTouchingGround = true;
@@ -296,7 +302,9 @@ public class PlayerController2 : MonoBehaviour {
 
         if (collision.gameObject.tag == "EnemySpikes") {
 
-            Instantiate(OuchSound, transform.position, transform.rotation);
+            if(isDead == false){
+                Instantiate(OuchSound, transform.position, transform.rotation);
+            }
 
             if (transform.position.x < collision.gameObject.transform.position.x) {
                 rigidBody.AddForce(new Vector2 (-2f, 2f), ForceMode2D.Impulse);
