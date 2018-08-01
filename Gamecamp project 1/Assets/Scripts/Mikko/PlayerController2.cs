@@ -20,6 +20,8 @@ public class PlayerController2 : MonoBehaviour {
     public Vector2 CheckpoinPosition;
     Vector2 startposition;
 
+    public GameObject enemyDeathParticle;
+
     public GameObject GunSound;
     public GameObject OuchSound;
     public GameObject TouchGroundSound;
@@ -289,9 +291,10 @@ public class PlayerController2 : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy") {
 
             if (transform.position.y > collision.gameObject.transform.position.y + 0.5f) {
-                rigidBody.AddForce(Vector2.up * 500);
+                rigidBody.AddForce(Vector2.up * 400);
                 Debug.Log("tapoin vihollisen");
 				Instantiate(enemyDeathSound, transform.position, transform.rotation);
+                Instantiate(enemyDeathParticle, collision.transform.position, collision.transform.rotation);
                 Destroy(collision.gameObject);
             }
             else {

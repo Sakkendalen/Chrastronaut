@@ -15841,6 +15841,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1995004195345574, guid: ab621e2705b3b6244b89e027a892311f,
         type: 2}
+    - target: {fileID: 114256485594305600, guid: 1fe6f602408c9c9469b6622f1ecb4032,
+        type: 2}
+      propertyPath: enemyDeathParticle
+      value: 
+      objectReference: {fileID: 1392917051102200, guid: 5c984f7d8a5223a45b02cb74128ea943,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe6f602408c9c9469b6622f1ecb4032, type: 2}
   m_IsPrefabParent: 0
