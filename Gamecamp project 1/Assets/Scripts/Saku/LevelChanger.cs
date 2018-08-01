@@ -51,9 +51,9 @@ public class LevelChanger : MonoBehaviour {
 	//sets what level needs to be loaded. If level 3 then load mainmenu else automatically next level.
 	public void FadeToLevel(int levelIndex) {
 
-		if(levelIndex == 3){
+		if(levelIndex == 0){
 			LevelToLoad = levelIndex;
-			animator.SetTrigger("FadeOut");
+			animator.SetTrigger("FadeOutEnd");
 		}
 		else {
 			//WinLevel();
