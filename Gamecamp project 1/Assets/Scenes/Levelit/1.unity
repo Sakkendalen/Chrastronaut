@@ -2065,7 +2065,7 @@ Transform:
   - {fileID: 355561370}
   - {fileID: 2022441362}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217814351 stripped
 GameObject:
@@ -2597,8 +2597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadiusY: 2.17
-  Speed: 0.24
+  MovementRadiusY: 0
+  Speed: 0
   MovementRadiusX: 0
 --- !u!61 &267637545
 BoxCollider2D:
@@ -4251,7 +4251,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4086187075017322, guid: b5b61c4334297e441ae5eab830e74a83, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5b61c4334297e441ae5eab830e74a83, type: 2}
@@ -8420,8 +8420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6897214e5855174d974019febc28b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRadiusY: 2.17
-  Speed: 0.24
+  MovementRadiusY: 0
+  Speed: 0
   MovementRadiusX: 0
 --- !u!61 &986038384
 BoxCollider2D:
