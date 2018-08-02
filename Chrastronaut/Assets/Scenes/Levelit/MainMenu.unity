@@ -8041,7 +8041,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chrashtronaut
+  m_Text: Crashtronaut
 --- !u!222 &1150261539
 CanvasRenderer:
   m_ObjectHideFlags: 0
