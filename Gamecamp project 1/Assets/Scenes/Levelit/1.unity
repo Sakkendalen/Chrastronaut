@@ -12858,6 +12858,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114385177001496896, guid: 831d80dad6381a048a3444e81cbfe5e0,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Level 1
+
+        Strange new planet'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191773393370954, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385177001496896, guid: 831d80dad6381a048a3444e81cbfe5e0,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
   m_IsPrefabParent: 0

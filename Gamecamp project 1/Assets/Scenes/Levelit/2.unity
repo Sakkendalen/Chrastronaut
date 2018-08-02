@@ -28387,7 +28387,9 @@ Prefab:
     - target: {fileID: 114385177001496896, guid: 831d80dad6381a048a3444e81cbfe5e0,
         type: 2}
       propertyPath: m_Text
-      value: Level 2
+      value: 'Level 2
+
+        Struggle in canyon forest'
       objectReference: {fileID: 0}
     - target: {fileID: 4046352529933370, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -28400,6 +28402,15 @@ Prefab:
     - target: {fileID: 4046352529933370, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191773393370954, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385177001496896, guid: 831d80dad6381a048a3444e81cbfe5e0,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831d80dad6381a048a3444e81cbfe5e0, type: 2}
