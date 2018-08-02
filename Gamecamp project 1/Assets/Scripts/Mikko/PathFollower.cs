@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathFollower : MonoBehaviour {
 
-    Node [] pathNode;
+    public Node [] pathNode;
     public GameObject assignedObject;   //navpoint
     public GameObject bird;
     public float speed;

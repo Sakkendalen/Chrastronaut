@@ -8,27 +8,34 @@ public class bubblescript : MonoBehaviour {
     bool isFistConnected;
     GameObject fist;
     public GameObject poks;
+	int imTooHigh;
 
 	// Use this for initialization
 	void Start () {
         startpos = transform.position;
         isFistConnected = false;
         fist = GameObject.Find("Fist");
+		imTooHigh = 0;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if ( transform.position.y > 10f) {
+			imTooHigh++;
             //transform.position = new Vector3(startpos.x, -6f , startpos.z);
             //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            if (isFistConnected == true) {
+			if (isFistConnected == true && imTooHigh > 0) {
                 //release FIST
                 fist.GetComponent<Fist2>().SetFistState(3);
+				GetComponent<CircleCollider2D>().enabled = false;
             }
 
-            Instantiate(poks, transform.position, transform.rotation);
-            Destroy(gameObject);
+			if (imTooHigh >= 5) {
+				Instantiate (poks, transform.position, transform.rotation);
+				Debug.Log ("Kupla tuhoutui ja koukku oli kiinni : " + isFistConnected);
+				Destroy (gameObject);
+			}
         }
 	}
 
