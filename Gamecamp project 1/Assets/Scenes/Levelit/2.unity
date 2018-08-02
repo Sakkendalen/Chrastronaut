@@ -20342,6 +20342,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.020000003, y: 0.011814313}
   m_EdgeRadius: 0
+--- !u!1 &827912905 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1871036720156706, guid: e68f46b2571fb3149be3704dd2d68713,
+    type: 2}
+  m_PrefabInternal: {fileID: 903451485}
+--- !u!58 &827912908
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 827912905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4869746, y: -0.042159744}
+  serializedVersion: 2
+  m_Radius: 0.008758801
 --- !u!1 &830827779 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: d3b6b5b0894f9d141970bf23743df004, type: 3}
@@ -21425,6 +21445,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 100.00005
       objectReference: {fileID: 0}
+    - target: {fileID: 1871036720156706, guid: e68f46b2571fb3149be3704dd2d68713, type: 2}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68f46b2571fb3149be3704dd2d68713, type: 2}
   m_IsPrefabParent: 0
@@ -22099,7 +22123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kamera: {fileID: 212344153}
-  ZoomOutX: 8
+  ZoomOutX: 4
   ZoomOutY: 0
   ZoomOutZ: -4
 --- !u!4 &955152622
