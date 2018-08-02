@@ -18,7 +18,7 @@ public class bubblescript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
         if ( transform.position.y > 10f) {
             //transform.position = new Vector3(startpos.x, -6f , startpos.z);
             //GetComponent<Rigidbody2D>().velocity = Vector2.zero;

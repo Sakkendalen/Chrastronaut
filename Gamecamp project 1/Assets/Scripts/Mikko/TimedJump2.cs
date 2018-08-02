@@ -11,7 +11,7 @@ public class TimedJump2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(new Vector3(0,0, -0.05f), Space.World );
+		transform.Translate(new Vector3(0,0, -0.05f) * Time.deltaTime * 55f, Space.World );
 
         if (transform.position.z < -8f) {
             transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z +45);

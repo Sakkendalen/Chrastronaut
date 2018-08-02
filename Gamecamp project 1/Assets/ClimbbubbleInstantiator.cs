@@ -5,12 +5,12 @@ using UnityEngine;
 public class ClimbbubbleInstantiator : MonoBehaviour {
 
     public GameObject bubble;
-    int countdown;
+    float countdown;
     float xmod;
 
 	// Use this for initialization
 	void Start () {
-        countdown = Random.Range(100, 300);
+        countdown = Random.Range(100f, 300f);
         xmod = 0f;
 	}
 	
@@ -19,12 +19,12 @@ public class ClimbbubbleInstantiator : MonoBehaviour {
 		
 
         if (countdown > 0) {
-            countdown--;
+			countdown -= 1 * Time.deltaTime * 55f;
         }
-        if(countdown == 0) {
+        if(countdown <= 0) {
             xmod = Random.Range(-2f, 2f);
             Instantiate(bubble, new Vector3(transform.position.x + xmod ,transform.position.y, transform.position.z), transform.rotation);
-            countdown = Random.Range(400, 1000);
+            countdown = Random.Range(550f, 850f);
         }
 
 	}
