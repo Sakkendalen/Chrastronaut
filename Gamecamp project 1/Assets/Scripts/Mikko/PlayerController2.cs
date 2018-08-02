@@ -17,7 +17,7 @@ public class PlayerController2 : MonoBehaviour {
     bool isTouchingGround;
     bool walkleft;
     bool idle;
-    public Vector2 CheckpoinPosition;
+    public Vector2 CheckpoinPosition; 
     Vector2 startposition;
 
     public GameObject enemyDeathParticle;
@@ -173,11 +173,9 @@ public class PlayerController2 : MonoBehaviour {
             //hit = Physics2D.Raycast(transform.position, new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2), 7f);//vaihtoehtoinen hiiriohjaus
             if (Input.GetButtonDown("Fire1")) {
                 hit = Physics2D.Raycast(transform.position, mousePosition - transform.position, 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
-                //Debug.Log("HiiriFire");
             }
             if (Input.GetButtonDown("Fire1J")) {
                 hit = Physics2D.Raycast(transform.position, new Vector3(movementx , movementy, 0f), 7f);    //mousekontrollin kolmas versio joka saattaa jopa toimia
-                Debug.Log("JoiskaFire");
             }
 
             if(isDead == false){
@@ -299,6 +297,7 @@ public class PlayerController2 : MonoBehaviour {
             }
             else {
                 Debug.Log("vihollinen gyökkää");
+                Instantiate(OuchSound, transform.position, transform.rotation);
                 rigidBody.AddForce(new Vector2(1.5f * (transform.position.x - collision.gameObject.transform.position.x), 2f), ForceMode2D.Impulse);
                 gameObject.GetComponent<PlayerHealth>().LoseHealth();
                 //Die();

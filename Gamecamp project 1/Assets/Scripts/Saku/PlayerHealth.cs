@@ -71,7 +71,6 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (CurrentHealth <= 3 && CurrentHealth > 0 && InvulnerabilityTimer == 0){
 			CurrentHealth--;
-			Debug.Log("Ouch");
 			DisplayHealth(0);
             InvulnerabilityTimer = 10;
 		}
