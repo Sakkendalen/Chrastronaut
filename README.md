@@ -1,6 +1,8 @@
-# Gamecamp-project-1
+Crashtronaut
 
-1.Kun työskentelet uutta tee se omaasi sceneen.
-2.Kun saat uutta valmiiksi kopioi se MasterSceneen ja tarkista toimivuus -> commit/Push.
-3.ÄLÄ KOSKAAN PUSHAA JOS ON PULL (Poistaa MasterSceneen toisen tekemät muutokset).
-4.Pidä MasterScene varsinkin ja OmaScene ajantasalla.
+Crashtronaut is platform game what we developed during our summer semester Gamecamp in tampere university of applied sciences
+
+You have crashed to the unknown alien planet and your mission is to get trought 3 different levels to the new spaceship what your comrades have sent to pick you up.
+
+Music by Eric Matyas
+www.soundimage.org
