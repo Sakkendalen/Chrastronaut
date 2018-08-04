@@ -20,18 +20,18 @@ public class EnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        scaler = Quaternion.Euler(0, -2f, 0) * scaler;
+        scaler = Quaternion.Euler(0, -2f * Time.timeScale, 0) * scaler;
         //transform.localScale = transform.localScale + new Vector3(scaler.x/75, -scaler.x / 100, 0);
 		transform.localScale = transform.localScale +  new Vector3(scaler.x/250, scaler.x / 250 , scaler.x / 250);
 
         if (goingLeft == true) {
             //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
-            transform.Translate(new Vector2(speed/1000f, 0) );
+            transform.Translate(new Vector2(speed/1000f, 0) * Time.timeScale * Time.deltaTime * 55f);
             position--;
         }
         if (goingLeft == false) {
             //transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, -90, 0);
-            transform.Translate(new Vector2(-speed / 1000f, 0));
+            transform.Translate(new Vector2(-speed / 1000f, 0) * Time.timeScale * Time.deltaTime * 55f);
             position++;
         }
 

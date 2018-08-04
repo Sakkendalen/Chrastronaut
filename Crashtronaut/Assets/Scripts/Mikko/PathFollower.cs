@@ -34,9 +34,13 @@ public class PathFollower : MonoBehaviour {
 
         if (assignedObject.transform.position != currentPositionHolder) {   //add movement
             //assignedObject.transform.position = Vector3.Lerp(assignedObject.transform.position, currentPositionHolder, speed);
-            assignedObject.transform.position = Vector3.MoveTowards(assignedObject.transform.position, currentPositionHolder, speed);
 
-            bird.transform.position = Vector3.MoveTowards(bird.transform.position, assignedObject.transform.position, speed /1.3f);
+            if (Time.timeScale > 0.2f) {
+
+                assignedObject.transform.position = Vector3.MoveTowards(assignedObject.transform.position, currentPositionHolder, speed);
+
+                bird.transform.position = Vector3.MoveTowards(bird.transform.position, assignedObject.transform.position, speed / 1.3f);
+            }
 
 
             //ROTATION JUTTUJA
