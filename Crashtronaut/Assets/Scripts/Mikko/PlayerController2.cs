@@ -271,7 +271,7 @@ public class PlayerController2 : MonoBehaviour {
             if (isTouchingGround == false && TouchGroundSoundDelay == 0) {    //play touchGroundSound
                 if(isDead == false){
                     Instantiate(TouchGroundSound, transform.position, transform.rotation);
-                    Debug.Log("groundsound played");
+                    //Debug.Log("groundsound played");
                 }
             }
 

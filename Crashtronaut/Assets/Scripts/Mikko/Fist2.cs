@@ -32,6 +32,7 @@ public class Fist2 : MonoBehaviour {
         }
 
         if (state == 2) {
+
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, 0.5f);
             transform.LookAt(targetPosition);
         }
@@ -47,11 +48,23 @@ public class Fist2 : MonoBehaviour {
 
 
 
-        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
+        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)   //jos raycastin positio saavutetaan niin palataan
         {
             //Debug.Log("RETURN");
-            state = 3;
-            if(playerGameobject.GetComponent<PlayerController2>().isDead == false){
+            //tämä iffin sisällä ei aikaisemmin ollut kuin state = 3; ja äänen soittamisen iflause
+
+            //Collider2D circlecheck = Physics2D.OverlapCircle(transform.position, 1f);
+            //Debug.Log("Circlecheck tag : " + circlecheck.tag);
+
+            //if (circlecheck.tag == "Platform") {
+                //state = 4;
+                //Debug.Log("HEIHEIHEI!!! Fisti pääsi raycastin postioon mutta jäikö kiinni!?!?! Tämä viesti tulee jos OverlapCircle tunnistaa platformin");
+            //}
+            //else {
+                state = 3;
+            //}
+
+            if (playerGameobject.GetComponent<PlayerController2>().isDead == false){
 			    Instantiate(KelausSound, transform.position, transform.rotation);
             }
         }
@@ -91,7 +104,7 @@ public class Fist2 : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Platform") {
-            Debug.Log("TRIGGER2D!!!");
+            //Debug.Log("TRIGGER2D!!!");
 			//playsound
 			if (platformSoundReady) {
                 if(playerGameobject.GetComponent<PlayerController2>().isDead == false){
