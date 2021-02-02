@@ -6,3 +6,6 @@ You have crashed to the unknown alien planet and your mission is to get trought 
 
 Music by Eric Matyas
 www.soundimage.org
+
+publishded in itch.io
+https://jarpati.itch.io/crashtronaut
